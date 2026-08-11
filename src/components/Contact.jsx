@@ -10,8 +10,8 @@ const infoRows = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-bg">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section id="contact" className="py-14 sm:py-20 lg:py-28 bg-bg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12">
         <div>
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
             Contact
@@ -35,7 +35,7 @@ export default function Contact() {
             ))}
           </dl>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3">
             <a
               href={whatsappLink()}
               target="_blank"
@@ -62,7 +62,7 @@ export default function Contact() {
           href={SHOP_INFO.mapsLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative rounded-card overflow-hidden border border-line shadow-card min-h-[340px] flex items-center justify-center bg-surface"
+          className="group relative rounded-card overflow-hidden border border-line shadow-card min-h-[260px] sm:min-h-[340px] flex items-center justify-center bg-surface"
         >
           <div className="text-center px-8">
             <FiMapPin className="mx-auto text-4xl text-accent" />

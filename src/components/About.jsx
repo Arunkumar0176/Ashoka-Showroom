@@ -3,13 +3,13 @@ import SwatchStrip from "./SwatchStrip";
 // Edit the description text below to change the About Us copy.
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-28 bg-surface border-y border-line">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section id="about" className="py-14 sm:py-20 lg:py-28 bg-surface border-y border-line">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div className="rounded-card overflow-hidden shadow-lift order-2 lg:order-1">
           <img
             src="/images/about.png"
             alt="Inside the Ashoka Tiles & Hardware showroom"
-            className="w-full h-[420px] sm:h-[520px] object-cover"
+            className="w-full h-[280px] sm:h-[420px] lg:h-[520px] object-cover"
             loading="lazy"
           />
         </div>

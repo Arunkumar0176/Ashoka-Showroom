@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 export default function Products() {
   return (
-    <section id="products" className="py-20 sm:py-28 bg-surface border-y border-line">
+    <section id="products" className="py-14 sm:py-20 lg:py-28 bg-surface border-y border-line">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-12 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
@@ -18,7 +18,7 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

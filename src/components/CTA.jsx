@@ -4,9 +4,9 @@ import { SHOP_INFO, whatsappLink } from "../data/siteData";
 
 export default function CTA() {
   return (
-    <section className="bg-ink py-16 sm:py-20">
+    <section className="bg-ink py-12 sm:py-16 lg:py-20">
       <div className="max-w-4xl mx-auto px-5 sm:px-8 text-center">
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
+        <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-semibold text-white">
           Give Your Home a Premium Look
         </h2>
         <p className="text-white/70 mt-4 text-base sm:text-lg">
@@ -14,7 +14,7 @@ export default function CTA() {
           Tiles &amp; SanitaryWare.
         </p>
 
-        <div className="mt-9 flex flex-col sm:flex-row justify-center gap-4">
+        <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <a
             href={SHOP_INFO.phoneCallLink}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm sm:text-base font-semibold text-white hover:bg-accent-dark transition-colors"

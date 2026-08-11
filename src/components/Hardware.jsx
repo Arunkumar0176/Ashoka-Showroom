@@ -2,7 +2,7 @@ import { hardwareItems } from "../data/siteData";
 
 export default function Hardware() {
   return (
-    <section className="py-20 sm:py-28 bg-bg">
+    <section className="py-14 sm:py-20 lg:py-28 bg-bg">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-12 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
@@ -17,13 +17,13 @@ export default function Hardware() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {hardwareItems.map((item) => (
             <div
               key={item.name}
               className="rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow"
             >
-              <div className="h-32 sm:h-40 overflow-hidden">
+              <div className="h-28 sm:h-36 lg:h-40 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.name}
@@ -31,7 +31,7 @@ export default function Hardware() {
                   loading="lazy"
                 />
               </div>
-              <div className="p-4">
+              <div className="p-3 sm:p-4">
                 <h3 className="font-display text-base font-semibold text-ink">
                   {item.name}
                 </h3>

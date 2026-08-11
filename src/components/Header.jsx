@@ -18,13 +18,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex flex-col leading-tight">
-            <span className="font-display text-xl sm:text-2xl font-semibold text-ink">
-              Ashoka
-            </span>
-            <span className="text-[11px] sm:text-xs tracking-[0.2em] uppercase text-stone">
-              Tiles Showroom
-            </span>
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src="/images/logo.png"
+              alt="Ashoka Tiles Logo"
+              className="h-14 w-14 rounded-full object-cover border border-line shadow-sm"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-xl sm:text-2xl font-semibold text-ink">
+                Ashoka
+              </span>
+              <span className="text-[11px] sm:text-xs tracking-[0.2em] uppercase text-stone">
+                Tiles Showroom
+              </span>
+            </div>
           </a>
 
           {/* Desktop nav */}

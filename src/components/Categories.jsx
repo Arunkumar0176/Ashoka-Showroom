@@ -3,9 +3,9 @@ import { categories } from "../data/siteData";
 
 export default function Categories() {
   return (
-    <section id="collection" className="py-20 sm:py-28 bg-bg">
+    <section id="collection" className="py-14 sm:py-20 lg:py-28 bg-bg">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-2xl mb-10 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
             Our Collection
           </span>
@@ -18,13 +18,13 @@ export default function Categories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {categories.map((category) => (
             <article
               key={category.name}
               className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
                 <img
                   src={category.image}
                   alt={`${category.name} at Ashoka Tiles & Hardware`}

@@ -26,7 +26,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 sm:py-28 bg-bg">
+    <section className="py-14 sm:py-20 lg:py-28 bg-bg">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-12 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
@@ -38,11 +38,11 @@ export default function WhyChooseUs() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {reasons.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="rounded-card bg-surface border border-line p-7 shadow-card hover:shadow-lift transition-shadow"
+              className="rounded-card bg-surface border border-line p-5 sm:p-7 shadow-card hover:shadow-lift transition-shadow"
             >
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent text-xl mb-5">
                 <Icon />

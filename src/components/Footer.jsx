@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-white/80">
       <SwatchStrip />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-14 grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
         <div>
           <p className="font-display text-2xl font-semibold text-white">Ashoka Tiles</p>
           <p className="text-sm text-white/60 mt-2">{SHOP_INFO.tagline}</p>
