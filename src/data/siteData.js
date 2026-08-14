@@ -15,20 +15,20 @@ export const SHOP_INFO = {
   tagline: "Premium Tiles & SanitaryWare for Your Dream Home",
 
   // Replace with your real 10-digit number (no spaces, with country code for WhatsApp).
-  phoneDisplay: "+91 XXXXX XXXXX",
-  phoneCallLink: "tel:+91XXXXXXXXXX",
-  whatsappNumber: "91XXXXXXXXXX", // country code + number, no "+" or spaces
+  phoneDisplay: "+91-9939846959",
+  phoneCallLink: "tel:+919939846959",
+  whatsappNumber: "919939846959", // country code + number, no "+" or spaces
   whatsappMessage:
     "Hi, I'd like to enquire about tiles and SanitaryWare products.",
 
-  address: "Add your showroom address here",
-  hours: "Add business hours here (e.g. Mon–Sat, 8:00 AM – 8:00 PM)",
+  address: "Lakri Bazar, Mirganj Road, Siwan, Bihar",
+  hours: " Monday-Sunday, (7:00 AM – 8:00 PM)",
 
   // Your Google Maps share link — used by every "Get Directions" button.
   mapsLink: "https://maps.app.goo.gl/Ui4uj1uBqRpLGV5V7",
 
   social: {
-    instagram: "#",
+    instagram: "https://www.instagram.com/ashoka_tiles1?igsh=Njc0aHFicmJid28w",
     facebook: "#",
   },
 };
@@ -178,9 +178,9 @@ export const hardwareItems = [
 // Shown in the pricing section. Edit the "price" values as needed.
 // ---------------------------------------------------------------------
 export const pricingTiers = [
-  { label: "Tiles Starting From", price: "₹50 / sq.ft." },
-  { label: "Premium Tiles", price: "₹80+ / sq.ft." },
-  { label: "Bathroom Fittings", price: "₹250+" },
+  { label: "Tiles Starting From", price: "₹270 / Box." },
+  { label: "Premium Tiles", price: "₹600+ / Box." },
+  { label: "Bathroom Fittings", price: "₹280 / Box." },
 ];
 
 export const pricingNote =
