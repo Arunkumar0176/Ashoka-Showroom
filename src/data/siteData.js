@@ -60,32 +60,32 @@ export const categories = [
   {
     name: "Bathroom Tiles",
     description: "Water-resistant tiles designed for lasting shine.",
-    image: "/images/category-bathroom.jpg",
+    image: "/images/category/BathroomPF.png",
   },
   {
     name: "Kitchen Tiles",
     description: "Stain-resistant tiles for hardworking kitchens.",
-    image: "/images/category-kitchen.jpg",
+    image: "/images/category/KitchenPF.png",
   },
   {
     name: "Living Room Tiles",
     description: "Statement tiles that anchor your living space.",
-    image: "/images/category-living-room.jpg",
+    image: "/images/category/LivingRoomPF.png",
   },
   {
     name: "Outdoor Tiles",
     description: "Weatherproof tiles for patios, balconies and courtyards.",
-    image: "/images/category-outdoor.jpg",
+    image: "/images/category/outdoorPF.png",
   },
   {
     name: "Marble Finish Tiles",
     description: "The look of natural marble, made for daily use.",
-    image: "/images/category-marble.jpg",
+    image: "/images/category/marbelPF.png",
   },
   {
     name: "Premium Tiles",
     description: "Our finest imported and designer tile collections.",
-    image: "/images/category-premium.jpg",
+    image: "/images/category/PremiumPF.png",
   },
 ];
 
