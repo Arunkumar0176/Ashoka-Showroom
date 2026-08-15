@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
@@ -9,8 +10,9 @@ import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CategoryPage from "./components/CategoryPage";
 
-export default function App() {
+function Home() {
   return (
     <div className="min-h-screen bg-bg">
       <Header />
@@ -27,5 +29,16 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collections/:slug" element={<CategoryPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

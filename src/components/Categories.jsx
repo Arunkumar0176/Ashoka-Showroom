@@ -1,4 +1,5 @@
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import { categories } from "../data/siteData";
 
 export default function Categories() {
@@ -39,13 +40,13 @@ export default function Categories() {
                 <p className="text-sm text-stone mt-2 leading-relaxed">
                   {category.description}
                 </p>
-                <a
-                  href="#products"
+                <Link
+                  to={`/collections/${category.slug}`}
                   className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
                 >
                   View Collection
                   <FiArrowUpRight />
-                </a>
+                </Link>
               </div>
             </article>
           ))}

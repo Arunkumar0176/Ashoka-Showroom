@@ -49,43 +49,75 @@ export function whatsappLink(customMessage) {
 export const categories = [
   {
     name: "Floor Tiles",
+    slug: "floor-tiles",
     description: "Durable, elegant tiles built for everyday living spaces.",
     image: "/images/category/floorPF.png",
+    tiles: [
+      { name: "Floor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles1PF.png" },
+    ],
   },
   {
     name: "Wall Tiles",
+    slug: "wall-tiles",
     description: "Glossy and matte finishes to elevate any wall.",
     image: "/images/category/wallPF.png",
+    tiles: [
+      { name: "Wall Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles2PF.png" },
+    ],
   },
   {
     name: "Bathroom Tiles",
+    slug: "bathroom-tiles",
     description: "Water-resistant tiles designed for lasting shine.",
     image: "/images/category/BathroomPF.png",
+    tiles: [
+      { name: "Bathroom Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles3PF.png" },
+    ],
   },
   {
     name: "Kitchen Tiles",
+    slug: "kitchen-tiles",
     description: "Stain-resistant tiles for hardworking kitchens.",
     image: "/images/category/KitchenPF.png",
+    tiles: [
+      { name: "Kitchen Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles4PF.png" },
+    ],
   },
   {
     name: "Living Room Tiles",
+    slug: "living-room-tiles",
     description: "Statement tiles that anchor your living space.",
     image: "/images/category/LivingRoomPF.png",
+    tiles: [
+      { name: "Living Room Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles1PF.png" },
+    ],
   },
   {
     name: "Outdoor Tiles",
+    slug: "outdoor-tiles",
     description: "Weatherproof tiles for patios, balconies and courtyards.",
     image: "/images/category/outdoorPF.png",
+    tiles: [
+      { name: "Outdoor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles2PF.png" },
+    ],
   },
   {
     name: "Marble Finish Tiles",
+    slug: "marble-finish-tiles",
     description: "The look of natural marble, made for daily use.",
     image: "/images/category/marbelPF.png",
+    tiles: [
+      { name: "Marble Tile 1", size: "2 × 4 ft", price: "₹600 / Box", image: "/images/tiles/tiles3PF.png" },
+    ],
   },
   {
     name: "Premium Tiles",
+    slug: "premium-tiles",
     description: "Our finest imported and designer tile collections.",
     image: "/images/category/PremiumPF.png",
+    tiles: [
+      { name: "Premium Tile 1", size: "2 × 4 ft", price: "₹600 / Box", image: "/images/tiles/tiles4PF.png" },
+    ],
   },
 ];
 
@@ -103,7 +135,7 @@ export const products = [
     category: "Floor Tiles",
     size: "4 × 2 ft",
     price: "₹85 / sq.ft.",
-    image: "/images/tile1.jpg",
+    image: "/images/tiles/tiles1PF.png",
   },
   {
     id: 2,
@@ -111,7 +143,7 @@ export const products = [
     category: "Wall Tiles",
     size: "2 × 4 ft",
     price: "₹65 / sq.ft.",
-    image: "/images/tile2.jpg",
+    image: "/images/tiles/tiles2PF.png",
   },
   {
     id: 3,
@@ -119,7 +151,7 @@ export const products = [
     category: "Bathroom Tiles",
     size: "2 × 4 ft",
     price: "₹75 / sq.ft.",
-    image: "/images/tile3.jpg",
+    image: "/images/tiles/tiles3PF.png",
   },
   {
     id: 4,
@@ -127,7 +159,7 @@ export const products = [
     category: "Kitchen Tiles",
     size: "2 × 4 ft",
     price: "₹70 / sq.ft.",
-    image: "/images/tile4.jpg",
+    image: "/images/tiles/tiles4PF.png",
   },
 ];
 
