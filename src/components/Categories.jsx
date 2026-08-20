@@ -21,14 +21,15 @@ export default function Categories() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {categories.map((category) => (
-            <article
+            <Link
               key={category.name}
-              className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow"
+              to={`/collections/${category.slug}`}
+              className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow block"
             >
               <div className="relative h-44 sm:h-48 overflow-hidden">
                 <img
                   src={category.image}
-                  alt={`${category.name} at Ashoka Tiles & Hardware`}
+                  alt={`${category.name} at Ashoka Tiles`}
                   className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -40,15 +41,12 @@ export default function Categories() {
                 <p className="text-sm text-stone mt-2 leading-relaxed">
                   {category.description}
                 </p>
-                <Link
-                  to={`/collections/${category.slug}`}
-                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
-                >
+                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent group-hover:text-accent-dark transition-colors">
                   View Collection
                   <FiArrowUpRight />
-                </Link>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

@@ -53,7 +53,8 @@ export const categories = [
     description: "Durable, elegant tiles built for everyday living spaces.",
     image: "/images/category/floorPF.png",
     tiles: [
-      { name: "Floor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles1PF.png" },
+      { name: "Floor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles4PF/tiles4PF.png"},
+      { name: "Floor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles4PF/tiles4PF.png" },
     ],
   },
   {
