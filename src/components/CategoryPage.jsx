@@ -193,28 +193,6 @@ function ImageViewer({ tile, onClose, categoryName }) {
         </div>
       )}
 
-      {/* Mobile: WhatsApp + dot indicators */}
-      <div className="sm:hidden shrink-0 flex items-center justify-between px-4 py-3 border-t border-line gap-3">
-        {images.length > 1 ? (
-          <div className="flex items-center gap-1.5">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`rounded-full transition-all ${i === current ? "w-4 h-2 bg-accent" : "w-2 h-2 bg-stone/30"}`}
-              />
-            ))}
-          </div>
-        ) : <div />}
-        <a
-          href={whatsappLink(`Hi, I'm interested in "${tile.name}" from ${categoryName}. Please share details.`)}
-          target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full bg-moss px-4 py-2 text-xs font-semibold text-white hover:opacity-90 transition-opacity"
-        >
-          <FaWhatsapp /> Enquire
-        </a>
-      </div>
-
       {/* Bottom info bar — all screen sizes */}
       <div className="shrink-0 flex items-center justify-between px-4 sm:px-6 py-3 border-t border-line gap-3">
         <div className="min-w-0">
