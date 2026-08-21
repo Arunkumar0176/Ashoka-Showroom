@@ -12,6 +12,32 @@ function getTileImages(tile) {
   return [];
 }
 
+/* ─── Share icon on tile card ─── */
+function ShareOnCard({ tile }) {
+  const [copied, setCopied] = useState(false);
+  const handleShare = async (e) => {
+    e.stopPropagation();
+    const text = `Check out "${tile.name}" at Ashoka Tiles!\n${window.location.href}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: tile.name, text, url: window.location.href }); } catch (_) {}
+    } else {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+  return (
+    <button
+      onClick={handleShare}
+      className="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-white/90 shadow flex items-center justify-center text-ink hover:bg-white transition-colors"
+      title={copied ? "Copied!" : "Share"}
+      aria-label="Share"
+    >
+      {copied ? <FiCheck size={13} className="text-moss" /> : <FiShare2 size={13} />}
+    </button>
+  );
+}
+
 /* ─── Flipkart/Amazon-style Image Viewer ─── */
 function ImageViewer({ tile, onClose, categoryName }) {
   const images = getTileImages(tile);
@@ -282,29 +308,32 @@ export default function CategoryPage() {
                 const images = getTileImages(tile);
                 return (
                   <article key={i} className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow flex flex-col">
-                    <button
-                      type="button"
-                      className="relative aspect-square overflow-hidden w-full"
-                      onClick={() => setActiveTile(i)}
-                      aria-label={`View ${tile.name}`}
-                    >
-                      <img
-                        src={images[0]}
-                        alt={tile.name}
-                        className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      {images.length > 1 && (
-                        <span className="absolute bottom-2 right-2 bg-ink/70 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">
-                          +{images.length} photos
+                    <div className="relative aspect-square overflow-hidden w-full">
+                      <button
+                        type="button"
+                        className="absolute inset-0 w-full h-full"
+                        onClick={() => setActiveTile(i)}
+                        aria-label={`View ${tile.name}`}
+                      >
+                        <img
+                          src={images[0]}
+                          alt={tile.name}
+                          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        {images.length > 1 && (
+                          <span className="absolute bottom-2 right-2 bg-ink/70 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                            +{images.length} photos
+                          </span>
+                        )}
+                        <span className="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors flex items-center justify-center">
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 text-ink text-xs font-semibold px-3 py-1.5 rounded-full">
+                            View Full
+                          </span>
                         </span>
-                      )}
-                      <span className="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors flex items-center justify-center">
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 text-ink text-xs font-semibold px-3 py-1.5 rounded-full">
-                          View Full
-                        </span>
-                      </span>
-                    </button>
+                      </button>
+                      <ShareOnCard tile={tile} />
+                    </div>
 
                     <div className="p-4 flex flex-col flex-1">
                       <h3 className="font-display text-base font-semibold text-ink">{tile.name}</h3>
