@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FiArrowLeft, FiArrowUpRight, FiX, FiChevronLeft, FiChevronRight, FiShare2, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
@@ -6,159 +6,215 @@ import { categories, whatsappLink } from "../data/siteData";
 import Header from "./Header";
 import Footer from "./Footer";
 
-// Returns array of images whether tile uses `images[]` or single `image`
 function getTileImages(tile) {
   if (tile.images && tile.images.length > 0) return tile.images;
   if (tile.image) return [tile.image];
   return [];
 }
 
-function ShareButton({ tile, categoryName, stopProp = false }) {
+/* ─── Flipkart/Amazon-style Image Viewer ─── */
+function ImageViewer({ tile, onClose, categoryName }) {
+  const images = getTileImages(tile);
+  const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
   const [copied, setCopied] = useState(false);
+  const thumbRef = useRef(null);
 
-  const handleShare = async (e) => {
-    if (stopProp) e.stopPropagation();
-    const shareText = `Check out "${tile.name}" from ${categoryName} at Ashoka Tiles!\n${window.location.href}`;
+  const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
+  const next = () => setCurrent((i) => (i + 1) % images.length);
+
+  // Lock body scroll
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  // Reset on tile change
+  useEffect(() => { setCurrent(0); }, [tile]);
+
+  // Keyboard
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [images.length]);
+
+  // Scroll active thumbnail into view
+  useEffect(() => {
+    if (thumbRef.current) {
+      const active = thumbRef.current.querySelector("[data-active='true']");
+      if (active) active.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+    }
+  }, [current]);
+
+  // Touch swipe
+  const onTouchStart = (e) => setTouchStart(e.touches[0].clientX);
+  const onTouchEnd = (e) => {
+    if (touchStart === null) return;
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+    setTouchStart(null);
+  };
+
+  const handleShare = async () => {
+    const text = `Check out "${tile.name}" at Ashoka Tiles!\n${window.location.href}`;
     if (navigator.share) {
-      try { await navigator.share({ title: tile.name, text: shareText, url: window.location.href }); } catch (_) {}
+      try { await navigator.share({ title: tile.name, text, url: window.location.href }); } catch (_) {}
     } else {
-      await navigator.clipboard.writeText(shareText);
+      await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
   return (
-    <button
-      type="button"
-      onClick={handleShare}
-      className="w-8 h-8 rounded-full bg-bg border border-line flex items-center justify-center text-stone hover:text-accent hover:border-accent transition-colors"
-      aria-label="Share this tile"
-      title={copied ? "Link copied!" : "Share"}
-    >
-      {copied ? <FiCheck size={14} className="text-moss" /> : <FiShare2 size={14} />}
-    </button>
-  );
-}
+    <div className="fixed inset-0 z-[9999] bg-white flex flex-col" role="dialog" aria-modal="true">
 
-function Lightbox({ tile, onClose, categoryName }) {
-  const images = getTileImages(tile);
-  const [current, setCurrent] = useState(0);
-  const [touchStart, setTouchStart] = useState(null);
+      {/* Close button top-right */}
+      <button onClick={onClose} className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full border border-line bg-white shadow flex items-center justify-center text-ink hover:bg-bg transition-colors" aria-label="Close">
+        <FiX size={16} />
+      </button>
 
-  const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
-  const next = () => setCurrent((i) => (i + 1) % images.length);
+      {/* ── Body: thumbnails + main image ── */}
+      <div className="flex-1 flex overflow-hidden">
 
-  useEffect(() => { setCurrent(0); }, [tile]);
+        {/* Desktop: vertical thumbnail sidebar */}
+        {images.length > 1 && (
+          <div
+            ref={thumbRef}
+            className="hidden sm:flex flex-col gap-2 w-20 shrink-0 overflow-y-auto py-4 px-2 border-r border-line"
+          >
+            {images.map((img, i) => (
+              <button
+                key={i}
+                data-active={i === current ? "true" : "false"}
+                onClick={() => setCurrent(i)}
+                className={`shrink-0 w-full aspect-square rounded overflow-hidden border-2 transition-all ${
+                  i === current ? "border-accent shadow-sm scale-105" : "border-transparent opacity-60 hover:opacity-100 hover:border-stone/40"
+                }`}
+              >
+                <img src={img} alt={`${tile.name} view ${i + 1}`} className="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        )}
 
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [images.length]);
+        {/* Main image */}
+        <div
+          className="flex-1 flex items-center justify-center relative bg-white overflow-hidden"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          <img
+            key={current}
+            src={images[current]}
+            alt={`${tile.name} - view ${current + 1}`}
+            className="max-h-full max-w-full object-contain p-4 sm:p-8 transition-opacity duration-200"
+            style={{ animation: "fadeIn 0.2s ease" }}
+          />
 
-  const handleTouchStart = (e) => setTouchStart(e.touches[0].clientX);
-  const handleTouchEnd = (e) => {
-    if (touchStart === null) return;
-    const diff = touchStart - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
-    setTouchStart(null);
-  };
+          {/* Prev / Next arrows */}
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={prev}
+                className="absolute left-2 sm:left-4 w-9 h-9 rounded-full bg-white border border-line shadow-sm flex items-center justify-center text-ink hover:bg-bg transition-colors"
+                aria-label="Previous image"
+              >
+                <FiChevronLeft size={18} />
+              </button>
+              <button
+                onClick={next}
+                className="absolute right-2 sm:right-4 w-9 h-9 rounded-full bg-white border border-line shadow-sm flex items-center justify-center text-ink hover:bg-bg transition-colors"
+                aria-label="Next image"
+              >
+                <FiChevronRight size={18} />
+              </button>
+            </>
+          )}
 
-  return (
-    <div className="fixed inset-0 z-[9999] bg-white flex flex-col" onClick={onClose}>
+          {/* Counter badge */}
+          {images.length > 1 && (
+            <span className="absolute bottom-3 right-3 bg-ink/60 text-white text-[11px] px-2.5 py-1 rounded-full">
+              {current + 1} / {images.length}
+            </span>
+          )}
+        </div>
+      </div>
 
-      {/* Top bar */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-line shrink-0">
-        <div>
-          <p className="font-display text-base sm:text-lg font-semibold text-ink">{tile.name}</p>
+      {/* Mobile: horizontal thumbnail strip */}
+      {images.length > 1 && (
+        <div
+          ref={thumbRef}
+          className="sm:hidden shrink-0 flex gap-2 overflow-x-auto px-4 py-3 border-t border-line"
+        >
+          {images.map((img, i) => (
+            <button
+              key={i}
+              data-active={i === current ? "true" : "false"}
+              onClick={() => setCurrent(i)}
+              className={`shrink-0 w-14 h-14 rounded overflow-hidden border-2 transition-all ${
+                i === current ? "border-accent scale-105" : "border-transparent opacity-55 hover:opacity-90"
+              }`}
+            >
+              <img src={img} alt={`view ${i + 1}`} className="w-full h-full object-cover" />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Mobile: WhatsApp + dot indicators */}
+      <div className="sm:hidden shrink-0 flex items-center justify-between px-4 py-3 border-t border-line gap-3">
+        {images.length > 1 ? (
+          <div className="flex items-center gap-1.5">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`rounded-full transition-all ${i === current ? "w-4 h-2 bg-accent" : "w-2 h-2 bg-stone/30"}`}
+              />
+            ))}
+          </div>
+        ) : <div />}
+        <a
+          href={whatsappLink(`Hi, I'm interested in "${tile.name}" from ${categoryName}. Please share details.`)}
+          target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 rounded-full bg-moss px-4 py-2 text-xs font-semibold text-white hover:opacity-90 transition-opacity"
+        >
+          <FaWhatsapp /> Enquire
+        </a>
+      </div>
+
+      {/* Bottom info bar — all screen sizes */}
+      <div className="shrink-0 flex items-center justify-between px-4 sm:px-6 py-3 border-t border-line gap-3">
+        <div className="min-w-0">
+          <p className="font-display text-sm sm:text-base font-semibold text-ink truncate">{tile.name}</p>
           <p className="text-xs text-stone mt-0.5">
-            {tile.size && `Size: ${tile.size}`}{tile.size && tile.price && " · "}{tile.price && tile.price}
+            {tile.size && `Size: ${tile.size}`}{tile.size && tile.price && " · "}{tile.price}
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <ShareButton tile={tile} categoryName={categoryName} />
+        <div className="flex items-center gap-2 shrink-0">
+          <button onClick={handleShare} className="w-8 h-8 rounded-full border border-line flex items-center justify-center text-stone hover:text-accent transition-colors" title={copied ? "Copied!" : "Share"}>
+            {copied ? <FiCheck size={14} className="text-moss" /> : <FiShare2 size={14} />}
+          </button>
           <a
             href={whatsappLink(`Hi, I'm interested in "${tile.name}" from ${categoryName}. Please share details.`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-moss px-4 py-2 text-xs font-semibold text-white hover:opacity-90 transition-opacity"
           >
             <FaWhatsapp /> Enquire
           </a>
-          <button
-            onClick={onClose}
-            className="w-9 h-9 rounded-full bg-bg border border-line flex items-center justify-center text-ink hover:bg-line transition-colors"
-            aria-label="Close"
-          >
-            <FiX size={18} />
-          </button>
         </div>
       </div>
-
-      {/* Main image area */}
-      <div
-        className="flex-1 flex items-center justify-center relative overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
-        <img
-          key={current}
-          src={images[current]}
-          alt={`${tile.name} - photo ${current + 1}`}
-          className="max-h-full max-w-full object-contain px-16 sm:px-24"
-        />
-
-        {/* Left arrow */}
-        {images.length > 1 && (
-          <button
-            onClick={prev}
-            className="absolute left-2 sm:left-4 w-10 h-10 rounded-full bg-white border border-line shadow flex items-center justify-center text-ink hover:bg-bg transition-colors"
-            aria-label="Previous"
-          >
-            <FiChevronLeft size={20} />
-          </button>
-        )}
-
-        {/* Right arrow */}
-        {images.length > 1 && (
-          <button
-            onClick={next}
-            className="absolute right-2 sm:right-4 w-10 h-10 rounded-full bg-white border border-line shadow flex items-center justify-center text-ink hover:bg-bg transition-colors"
-            aria-label="Next"
-          >
-            <FiChevronRight size={20} />
-          </button>
-        )}
-      </div>
-
-      {/* Dot indicators */}
-      {images.length > 1 && (
-        <div className="shrink-0 flex items-center justify-center gap-2 py-5" onClick={(e) => e.stopPropagation()}>
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`rounded-full transition-all ${
-                i === current
-                  ? "w-4 h-2.5 bg-accent"
-                  : "w-2.5 h-2.5 bg-stone/30 hover:bg-stone/60"
-              }`}
-              aria-label={`Go to photo ${i + 1}`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 }
 
+/* ─── Category Page ─── */
 export default function CategoryPage() {
   const { slug } = useParams();
   const [activeTile, setActiveTile] = useState(null);
@@ -184,7 +240,7 @@ export default function CategoryPage() {
       <Header />
 
       {activeTile !== null && (
-        <Lightbox
+        <ImageViewer
           tile={category.tiles[activeTile]}
           onClose={() => setActiveTile(null)}
           categoryName={category.name}
@@ -214,8 +270,7 @@ export default function CategoryPage() {
               <p className="text-stone mt-3 text-base">We're updating our {category.name} collection. Visit our showroom or contact us for availability.</p>
               <a
                 href={whatsappLink(`Hi, I'm interested in ${category.name}. Please share available options.`)}
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-moss px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
               >
                 <FaWhatsapp /> Enquire on WhatsApp
@@ -239,7 +294,6 @@ export default function CategoryPage() {
                         className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
-                      {/* Photo count badge */}
                       {images.length > 1 && (
                         <span className="absolute bottom-2 right-2 bg-ink/70 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">
                           +{images.length} photos
@@ -253,17 +307,13 @@ export default function CategoryPage() {
                     </button>
 
                     <div className="p-4 flex flex-col flex-1">
-                      <div className="flex items-start justify-between gap-2">
-                        <h3 className="font-display text-base font-semibold text-ink">{tile.name}</h3>
-                        <ShareButton tile={tile} categoryName={category.name} stopProp />
-                      </div>
+                      <h3 className="font-display text-base font-semibold text-ink">{tile.name}</h3>
                       {tile.size && <p className="text-xs text-stone mt-1">Size: {tile.size}</p>}
                       {tile.price && <p className="text-accent font-semibold mt-1 text-sm">{tile.price}</p>}
                       {tile.description && <p className="text-xs text-stone mt-2 leading-relaxed">{tile.description}</p>}
                       <a
                         href={whatsappLink(`Hi, I'm interested in "${tile.name}" from ${category.name}. Please share details.`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                         className="mt-auto pt-3 w-full inline-flex items-center justify-center gap-2 rounded-full bg-moss text-white text-xs font-semibold py-2.5 hover:opacity-90 transition-opacity"
                       >
                         <FaWhatsapp /> Enquire
