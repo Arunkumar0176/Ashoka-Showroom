@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX, FiMapPin } from "react-icons/fi";
+import { useNavigate, useLocation } from "react-router-dom";
 import { SHOP_INFO } from "../data/siteData";
 
 const navLinks = [
@@ -12,13 +13,27 @@ const navLinks = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const handleNav = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    if (isHome) {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/" + href);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-line">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3">
+          <a href="#home" onClick={(e) => handleNav(e, "#home")} className="flex items-center gap-3">
             <img
               src="/images/logo.png"
               alt="Ashoka Tiles Logo"
@@ -40,6 +55,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleNav(e, link.href)}
                 className="text-sm font-medium text-ink/80 hover:text-accent transition-colors"
               >
                 {link.label}
@@ -80,7 +96,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNav(e, link.href)}
                 className="py-3 text-base font-medium text-ink/85 border-b border-line/70 last:border-none"
               >
                 {link.label}

@@ -317,7 +317,12 @@ export default function CategoryPage() {
                       <h3 className="font-display text-base font-semibold text-ink">{tile.name}</h3>
                       {tile.size && <p className="text-xs text-stone mt-1">Size: {tile.size}</p>}
                       {tile.price && <p className="text-accent font-semibold mt-1 text-sm">{tile.price}</p>}
-                      {tile.description && <p className="text-xs text-stone mt-2 leading-relaxed">{tile.description}</p>}
+                      {tile.description && (
+                        <div className="mt-2 border-t border-line pt-2">
+                          <p className="text-xs font-semibold text-ink">Tile Quality</p>
+                          <p className="text-xs text-stone mt-1 leading-relaxed">{tile.description}</p>
+                        </div>
+                      )}
                       <a
                         href={whatsappLink(`Hi, I'm interested in "${tile.name}" from ${category.name}. Please share details.`)}
                         target="_blank" rel="noopener noreferrer"

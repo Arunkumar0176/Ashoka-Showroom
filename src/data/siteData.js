@@ -56,20 +56,92 @@ export const categories = [
       { 
         name: "Floor Tile 1", 
         size: "2 × 4 ft", 
-        price: "₹270 / Box", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
-          "/images/tiles/tiles4PF/tiles4PF.png",
-          "/images/tiles/tiles4PF/view1.jpg",
-          "/images/tiles/tiles4PF/view1.jpg",
+          "/images/tiles/Floor/Fl1/tilesPF.png",
+          "/images/tiles/Floor/Fl1/view1.jpg",
+          "/images/tiles/Floor/Fl1/view1.jpg",
         ]
       },
       { 
-        name: "Floor Tile 1", 
+        name: "Floor Tile 2", 
         size: "2 × 4 ft", 
-        price: "₹270 / Box", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
-          "/images/tiles/tiles4PF/tiles4PF.png",
-          "/images/tiles/tiles4PF/view1.jpg",
+          "/images/tiles/Floor/Fl2/tiles1PF.png",
+          "/images/tiles/Floor/Fl2/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl3/tiles1PF.jpg",
+          "/images/tiles/Floor/Fl3/view1.jpg",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl4/PF1.jpg",
+          "/images/tiles/Floor/Fl4/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl5/PF1.png",
+          "/images/tiles/Floor/Fl5/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl6/PF1.png",
+          "/images/tiles/Floor/Fl6/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl7/PF1.png",
+          "/images/tiles/Floor/Fl7/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl8/PF1.png",
+          
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl9/PF1.png",
+          "/images/tiles/Floor/Fl9/view1.png",
+        ]
+      },
+      { 
+        name: "Floor Tile 3", 
+        size: "2 × 4 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/Fl10/PF1.png",
+          "/images/tiles/Floor/Fl10/view1.png",
         ]
       },
     ],
@@ -80,7 +152,14 @@ export const categories = [
     description: "Glossy and matte finishes to elevate any wall.",
     image: "/images/category/wallPF.png",
     tiles: [
-      { name: "Wall Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles2PF.png" },
+      { name: "Wall Tile 1",
+        size: "2 × 4 ft",
+        price: "₹270 / Box",
+        images: [
+          "/images/tiles/tiles2PF/tiles2PF.png",
+          "/images/tiles/tiles2PF/view1.jpg",
+        ]
+       },
     ],
   },
   {
@@ -161,7 +240,7 @@ export const products = [
     category: "Wall Tiles",
     size: "2 × 4 ft",
     price: "₹65 / sq.ft.",
-    image: "/images/tiles/tiles2PF.png",
+    image: "/images/tiles/tiles2PF/tiles2PF.png",
   },
   {
     id: 3,
@@ -189,17 +268,17 @@ export const hardwareItems = [
   {
     name: "Bathroom Fittings",
     description: "Complete fitting solutions for modern bathrooms.",
-    image: "/images/hardware-bathroom-fittings.jpg",
+    image: "/images/hardware/PF1.png",
   },
   {
     name: "Taps",
     description: "Durable, corrosion-resistant taps in multiple finishes.",
-    image: "/images/hardware-taps.jpg",
+    image: "/images/hardware/PF2.png",
   },
   {
     name: "Shower",
     description: "Rain showers and hand showers for a spa-like feel.",
-    image: "/images/hardware-shower.jpg",
+    image: "/images/hardware/PF3.png",
   },
   {
     name: "Hot & Cold Mixer",
