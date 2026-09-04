@@ -1,5 +1,3 @@
-import SwatchStrip from "./SwatchStrip";
-
 // Edit the description text below to change the About Us copy.
 export default function About() {
   return (
@@ -27,7 +25,6 @@ export default function About() {
             and hardware products designed to give your home a beautiful and
             modern look.
           </p>
-          <SwatchStrip className="mt-8 rounded-full overflow-hidden h-2.5" />
         </div>
       </div>
     </section>

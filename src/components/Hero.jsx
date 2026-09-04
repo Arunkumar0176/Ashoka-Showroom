@@ -1,6 +1,5 @@
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { SHOP_INFO } from "../data/siteData";
-import SwatchStrip from "./SwatchStrip";
 
 export default function Hero() {
   return (
@@ -45,7 +44,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <SwatchStrip />
     </section>
   );
 }

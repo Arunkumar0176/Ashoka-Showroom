@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
         <p className="text-sm text-stone mt-1">Size: {product.size}</p>
         <p className="text-accent font-semibold mt-2 text-lg">{product.price}</p>
 
-        <div className="mt-5 flex flex-col gap-2.5 pt-1 mt-auto">
+        <div className="mt-1 flex flex-col gap-2.5 pt-1 mt-auto">
           <button
             type="button"
             className="w-full rounded-full border border-ink/20 text-ink text-sm font-semibold py-2.5 hover:border-ink/40 transition-colors"

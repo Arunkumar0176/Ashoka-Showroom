@@ -1,7 +1,6 @@
 import { FiInstagram, FiFacebook } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { SHOP_INFO, whatsappLink } from "../data/siteData";
-import SwatchStrip from "./SwatchStrip";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -16,7 +15,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink text-white/80">
-      <SwatchStrip />
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
         <div>
           <p className="font-display text-2xl font-semibold text-white">Ashoka Tiles</p>

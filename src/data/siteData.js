@@ -82,7 +82,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 4", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -91,7 +91,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 5", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -100,7 +100,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 6", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -109,7 +109,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 7", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -118,7 +118,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 8", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -127,7 +127,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 9", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -136,7 +136,7 @@ export const categories = [
         ]
       },
       { 
-        name: "Floor Tile 3", 
+        name: "Floor Tile 10", 
         size: "2 × 4 ft", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
@@ -231,7 +231,6 @@ export const products = [
     name: "Premium Marble Finish Tile",
     category: "Floor Tiles",
     size: "4 × 2 ft",
-    price: "₹85 / sq.ft.",
     image: "/images/tiles/tiles1PF.png",
   },
   {
@@ -239,7 +238,6 @@ export const products = [
     name: "Royal Gloss Wall Tile",
     category: "Wall Tiles",
     size: "2 × 4 ft",
-    price: "₹65 / sq.ft.",
     image: "/images/tiles/tiles2PF/tiles2PF.png",
   },
   {
@@ -247,7 +245,6 @@ export const products = [
     name: "Luxury Bathroom Tile",
     category: "Bathroom Tiles",
     size: "2 × 4 ft",
-    price: "₹75 / sq.ft.",
     image: "/images/tiles/tiles3PF.png",
   },
   {
@@ -255,7 +252,6 @@ export const products = [
     name: "Premium Kitchen Tile",
     category: "Kitchen Tiles",
     size: "2 × 4 ft",
-    price: "₹70 / sq.ft.",
     image: "/images/tiles/tiles4PF.png",
   },
 ];
@@ -283,22 +279,22 @@ export const hardwareItems = [
   {
     name: "Hot & Cold Mixer",
     description: "Smooth-control mixers for consistent water temperature.",
-    image: "/images/hardware-mixer.jpg",
+    image: "/images/hardware/PF4.png",
   },
   {
     name: "Kitchen Fittings",
     description: "Sinks, faucets and fittings built for daily use.",
-    image: "/images/hardware-kitchen-fittings.jpg",
+    image: "/images/hardware/PF4.png",
   },
   {
     name: "Sanitary Accessories",
     description: "Towel rails, holders and everyday bathroom essentials.",
-    image: "/images/hardware-sanitary-accessories.jpg",
+    image: "/images/hardware/PF6.png",
   },
   {
     name: "Other Hardware Products",
     description: "A wider range of fittings and hardware — ask in-store.",
-    image: "/images/hardware-other.jpg",
+    image: "/images/hardware/PF7.png",
   },
 ];
 
