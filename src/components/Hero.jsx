@@ -4,12 +4,12 @@ import { SHOP_INFO } from "../data/siteData";
 export default function Hero() {
   return (
     <section id="home" className="relative">
-      <div className="relative h-[100svh] min-h-[480px] w-full overflow-hidden">
+      <div className="relative h-[100svh] min-h-[600px] w-full overflow-hidden">
         {/* Background image — change this file to update the hero photo */}
         <img
           src="/images/hero.png"
           alt="Premium tile showroom display at Ashoka Tiles & Hardware"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-top sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/20" />
 

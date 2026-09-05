@@ -168,7 +168,15 @@ export const categories = [
     description: "Water-resistant tiles designed for lasting shine.",
     image: "/images/category/BathroomPF.png",
     tiles: [
-      { name: "Bathroom Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles3PF.png" },
+      { 
+        name: "Bathroom Tile 1", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC1/KC1.png",
+          "/images/tiles/Floor/Fl10/view1.png",
+        ]
+      },
     ],
   },
   {
@@ -177,7 +185,75 @@ export const categories = [
     description: "Stain-resistant tiles for hardworking kitchens.",
     image: "/images/category/KitchenPF.png",
     tiles: [
-      { name: "Kitchen Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles4PF.png" },
+      { 
+        name: "Kitchen Tile 1", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC1/KC1.png",
+          "/images/tiles/Kitchen/KC1/view1.png",
+        ]
+      },
+      { 
+        name: "Kitchen Tile 2", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC2/PF1.png",
+          "/images/tiles/Kitchen/KC2/view1.png",
+        ]
+      },
+      { 
+        name: "Kitchen Tile 3", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC3/PF.png",
+          "/images/tiles/Kitchen/KC3/view1.png",
+          "/images/tiles/Kitchen/KC3/view2.png"
+        ]
+      },
+      { 
+        name: "Kitchen Tile 4", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC4/PF.png",
+          "/images/tiles/Kitchen/KC4/view1.png",
+          "/images/tiles/Kitchen/KC4/view2.png"
+        ]
+      },
+      { 
+        name: "Kitchen Tile 5", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC5/PF.png",
+          "/images/tiles/Kitchen/KC5/view1.png",
+          "/images/tiles/Kitchen/KC5/view2.png",
+          "/images/tiles/Kitchen/KC5/view3.png"
+        ]
+      },
+      { 
+        name: "Kitchen Tile 6", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC6/PF.png",
+          "/images/tiles/Kitchen/KC6/view1.png",
+          "/images/tiles/Kitchen/KC6/view2.png",
+        ]
+      },
+      { 
+        name: "Kitchen Tile 7", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Kitchen/KC7/PF.png",
+          "/images/tiles/Kitchen/KC7/view1.png",
+          "/images/tiles/Kitchen/KC7/view2.png",
+        ]
+      },
     ],
   },
   {
