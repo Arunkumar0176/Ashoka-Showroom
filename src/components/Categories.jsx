@@ -17,6 +17,9 @@ export default function Categories() {
             Eight curated categories, each built for a different part of the home —
             browse by space to find the right tile for every room.
           </p>
+          <p className="mt-5 text-lg sm:text-xl font-semibold text-ink">
+            Tiles Collection
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">

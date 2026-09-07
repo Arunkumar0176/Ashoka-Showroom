@@ -6,7 +6,6 @@ import Products from "./components/Products";
 import WhyChooseUs from "./components/WhyChooseUs";
 import About from "./components/About";
 import Hardware from "./components/Hardware";
-import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -21,7 +20,6 @@ function Home() {
         <Categories />
         <Products />
         <Hardware />
-        <Pricing />
         <WhyChooseUs />
         <About />
         <CTA />

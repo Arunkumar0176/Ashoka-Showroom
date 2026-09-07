@@ -7,14 +7,13 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-12 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
-            Featured Tiles
+            Sanitaryware
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink mt-3">
-            Featured Tiles
+            Our Premium Sanitaryware Collection
           </h2>
           <p className="text-stone mt-4 text-base sm:text-lg">
-            A closer look at some of our most-loved tiles. {" "}
-            
+            Explore our range of premium sanitaryware — crafted for comfort, style and lasting quality.
           </p>
         </div>
 

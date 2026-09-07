@@ -146,22 +146,7 @@ export const categories = [
       },
     ],
   },
-  {
-    name: "Wall Tiles",
-    slug: "wall-tiles",
-    description: "Glossy and matte finishes to elevate any wall.",
-    image: "/images/category/wallPF.png",
-    tiles: [
-      { name: "Wall Tile 1",
-        size: "2 × 4 ft",
-        price: "₹270 / Box",
-        images: [
-          "/images/tiles/tiles2PF/tiles2PF.png",
-          "/images/tiles/tiles2PF/view1.jpg",
-        ]
-       },
-    ],
-  },
+  
   {
     name: "Bathroom Tiles",
     slug: "bathroom-tiles",
@@ -254,6 +239,22 @@ export const categories = [
           "/images/tiles/Kitchen/KC7/view2.png",
         ]
       },
+    ],
+  },
+  {
+    name: "Elevation Tiles",
+    slug: "wall-tiles",
+    description: "Glossy and matte finishes to elevate any wall.",
+    image: "/images/category/wallPF.png",
+    tiles: [
+      { name: "Wall Tile 1",
+        size: "2 × 4 ft",
+        price: "₹270 / Box",
+        images: [
+          "/images/tiles/tiles2PF/tiles2PF.png",
+          "/images/tiles/tiles2PF/view1.jpg",
+        ]
+       },
     ],
   },
   {
