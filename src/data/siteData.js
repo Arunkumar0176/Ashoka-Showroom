@@ -247,12 +247,52 @@ export const categories = [
     description: "Glossy and matte finishes to elevate any wall.",
     image: "/images/category/wallPF.png",
     tiles: [
-      { name: "Wall Tile 1",
-        size: "2 × 4 ft",
-        price: "₹270 / Box",
+      { name: "Elevation Tile 1",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
         images: [
-          "/images/tiles/tiles2PF/tiles2PF.png",
-          "/images/tiles/tiles2PF/view1.jpg",
+          "/images/tiles/Elevation/Ev1/PF.png",
+          "/images/tiles/Elevation/Ev1/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 2",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev2/PF.png",
+          "/images/tiles/Elevation/Ev2/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 3",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev3/PF.png",
+          "/images/tiles/Elevation/Ev3/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 4",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev4/PF.png",
+          "/images/tiles/Elevation/Ev4/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 5",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev5/PF.png",
+          "/images/tiles/Elevation/Ev5/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 6",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev6/PF.png",
+          "/images/tiles/Elevation/Ev6/view1.png",
         ]
        },
     ],

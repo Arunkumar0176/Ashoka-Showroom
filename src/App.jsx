@@ -10,6 +10,7 @@ import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CategoryPage from "./components/CategoryPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ function Home() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collections/:slug" element={<CategoryPage />} />

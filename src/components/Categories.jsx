@@ -8,17 +8,14 @@ export default function Categories() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-10 sm:mb-16">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">
-            Our Collection
+            Tiles
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink mt-3">
-            Explore Our Collection
+            Our Premium Tiles Collection
           </h2>
           <p className="text-stone mt-4 text-base sm:text-lg">
             Eight curated categories, each built for a different part of the home —
             browse by space to find the right tile for every room.
-          </p>
-          <p className="mt-5 text-lg sm:text-xl font-semibold text-ink">
-            Tiles Collection
           </p>
         </div>
 
