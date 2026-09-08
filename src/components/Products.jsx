@@ -1,5 +1,6 @@
-import { products } from "../data/siteData";
-import ProductCard from "./ProductCard";
+import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { sanitarywareItems } from "../data/siteData";
 
 export default function Products() {
   return (
@@ -17,9 +18,29 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+          {sanitarywareItems.map((item) => (
+            <Link
+              key={item.slug}
+              to={`/sanitaryware/${item.slug}`}
+              className="group rounded-card overflow-hidden bg-bg border border-line shadow-card hover:shadow-lift transition-shadow block"
+            >
+              <div className="h-28 sm:h-36 lg:h-40 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-3 sm:p-4">
+                <h3 className="font-display text-base font-semibold text-ink">{item.name}</h3>
+                <p className="text-xs text-stone mt-1.5 leading-relaxed">{item.description}</p>
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-accent">
+                  View Collection <FiArrowUpRight />
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

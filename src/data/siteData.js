@@ -295,6 +295,14 @@ export const categories = [
           "/images/tiles/Elevation/Ev6/view1.png",
         ]
        },
+       { name: "Elevation Tile 7",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/Elevation/Ev8/PF.png",
+          "/images/tiles/Elevation/Ev8/view1.png",
+        ]
+       },
     ],
   },
   {
@@ -336,11 +344,56 @@ export const categories = [
 ];
 
 // ---------------------------------------------------------------------
-// 3. FEATURED PRODUCTS
-// Add, remove or edit products by editing this array only.
-// "image" paths point to /public/images/ — replace those files with
-// real product photos using the same filenames, or add new files and
-// update the path here.
+// 3. SANITARYWARE COLLECTION
+// Shown in the "Sanitaryware" section.
+// ---------------------------------------------------------------------
+export const sanitarywareItems = [
+  {
+    name: "Vanity Box",
+    slug: "vanity-box",
+    description: "Stylish vanity units combining storage and elegance for modern bathrooms.",
+    image: "/images/sanitaryware/vanity.png",
+    items: [],
+  },
+  {
+    name: "English Seat",
+    slug: "english-seat",
+    description: "Comfortable, hygienic English-style toilet seats built for daily use.",
+    image: "/images/sanitaryware/english-seat.png",
+    items: [],
+  },
+  {
+    name: "Sink",
+    slug: "sink",
+    description: "Durable kitchen and utility sinks in multiple sizes and finishes.",
+    image: "/images/sanitaryware/sink.png",
+    items: [],
+  },
+  {
+    name: "Basin",
+    slug: "basin",
+    description: "Wall-hung and counter-top basins crafted for style and functionality.",
+    image: "/images/sanitaryware/basin.png",
+    items: [],
+  },
+  {
+    name: "Tank",
+    slug: "tank",
+    description: "Reliable flush tanks with smooth operation and water-saving design.",
+    image: "/images/sanitaryware/tank.png",
+    items: [],
+  },
+  {
+    name: "Other",
+    slug: "other",
+    description: "Explore more sanitaryware essentials — ask us in-store for the full range.",
+    image: "/images/sanitaryware/other.png",
+    items: [],
+  },
+];
+
+// ---------------------------------------------------------------------
+// 4. FEATURED PRODUCTS (legacy — kept for reference)
 // ---------------------------------------------------------------------
 export const products = [
   {

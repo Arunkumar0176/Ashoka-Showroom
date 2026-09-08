@@ -10,6 +10,7 @@ import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CategoryPage from "./components/CategoryPage";
+import SanitarywarePage from "./components/SanitarywarePage";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Home() {
@@ -38,6 +39,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collections/:slug" element={<CategoryPage />} />
+        <Route path="/sanitaryware/:slug" element={<SanitarywarePage />} />
       </Routes>
     </BrowserRouter>
   );
