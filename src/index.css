@@ -6,8 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 
-html.no-smooth {
-  scroll-behavior: auto;
+html.no-smooth,
+html.no-smooth body {
+  scroll-behavior: auto !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

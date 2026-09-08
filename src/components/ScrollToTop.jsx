@@ -5,6 +5,8 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     document.documentElement.classList.add("no-smooth");
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     window.scrollTo(0, 0);
     document.documentElement.classList.remove("no-smooth");
   }, [pathname]);
