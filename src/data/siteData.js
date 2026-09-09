@@ -299,6 +299,14 @@ export const categories = [
         size: "12 × 18 inc",
         description: "Made with high-quality raw materials for long-lasting performance.",
         images: [
+          "/images/tiles/Elevation/Ev7/PF.png",
+          "/images/tiles/Elevation/Ev7/view1.png",
+        ]
+       },
+       { name: "Elevation Tile 8",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
           "/images/tiles/Elevation/Ev8/PF.png",
           "/images/tiles/Elevation/Ev8/view1.png",
         ]
@@ -352,42 +360,42 @@ export const sanitarywareItems = [
     name: "Vanity Box",
     slug: "vanity-box",
     description: "Stylish vanity units combining storage and elegance for modern bathrooms.",
-    image: "/images/sanitaryware/vanity.png",
+    image: "/images/Sanitaryware_cat/vanityPF.png",
     items: [],
   },
   {
     name: "English Seat",
     slug: "english-seat",
     description: "Comfortable, hygienic English-style toilet seats built for daily use.",
-    image: "/images/sanitaryware/english-seat.png",
+    image: "/images/Sanitaryware_cat/SeatPF.png",
     items: [],
   },
   {
     name: "Sink",
     slug: "sink",
     description: "Durable kitchen and utility sinks in multiple sizes and finishes.",
-    image: "/images/sanitaryware/sink.png",
+    image: "/images/Sanitaryware_cat/SinkPF.png",
     items: [],
   },
   {
     name: "Basin",
     slug: "basin",
     description: "Wall-hung and counter-top basins crafted for style and functionality.",
-    image: "/images/sanitaryware/basin.png",
+    image: "/images/Sanitaryware_cat/BasinPF.png",
     items: [],
   },
   {
     name: "Tank",
     slug: "tank",
     description: "Reliable flush tanks with smooth operation and water-saving design.",
-    image: "/images/sanitaryware/tank.png",
+    image: "/images/Sanitaryware_cat/TankPF.png",
     items: [],
   },
   {
     name: "Other",
     slug: "other",
     description: "Explore more sanitaryware essentials — ask us in-store for the full range.",
-    image: "/images/sanitaryware/other.png",
+    image: "/images/Sanitaryware_cat/other.png",
     items: [],
   },
 ];
