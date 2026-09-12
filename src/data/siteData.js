@@ -163,13 +163,23 @@ export const categories = [
         ]
       },
       { 
-        name: "Bathroom Tile 1", 
+        name: "Bathroom Tile 2", 
         size: "12 × 18 inc", 
         description: "Made with high-quality raw materials for long-lasting performance.", 
         images: [
           "/images/tiles/Bathroom/BT2/PF.png",
           "/images/tiles/Bathroom/BT2/view1.png",
           "/images/tiles/Bathroom/BT2/view2.png",
+        ]
+      },
+      { 
+        name: "Bathroom Tile 3", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT3/PF.png",
+          "/images/tiles/Bathroom/BT3/view1.png",
+          "/images/tiles/Bathroom/BT3/view2.png",
         ]
       },
     ],

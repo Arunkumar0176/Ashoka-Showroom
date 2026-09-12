@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { FiArrowLeft, FiArrowUpRight, FiX, FiChevronLeft, FiChevronRight, FiShare2, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { sanitarywareItems, whatsappLink } from "../data/siteData";
@@ -157,8 +157,26 @@ function ImageViewer({ item, onClose, categoryName }) {
 
 export default function SanitarywarePage() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [activeItem, setActiveItem] = useState(null);
   const category = sanitarywareItems.find((c) => c.slug === slug);
+
+  const openItem = (i) => {
+    setActiveItem(i);
+    window.history.pushState({ item: i }, "");
+  };
+
+  const closeItem = () => {
+    setActiveItem(null);
+  };
+
+  useEffect(() => {
+    const onPopState = () => {
+      if (activeItem !== null) setActiveItem(null);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [activeItem]);
 
   if (!category) {
     return (
@@ -182,7 +200,7 @@ export default function SanitarywarePage() {
       {activeItem !== null && (
         <ImageViewer
           item={category.items[activeItem]}
-          onClose={() => setActiveItem(null)}
+          onClose={closeItem}
           categoryName={category.name}
         />
       )}
@@ -221,7 +239,7 @@ export default function SanitarywarePage() {
                 return (
                   <article key={i} className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow flex flex-col">
                     <div className="relative aspect-square overflow-hidden w-full">
-                      <button type="button" className="absolute inset-0 w-full h-full" onClick={() => setActiveItem(i)} aria-label={`View ${item.name}`}>
+                      <button type="button" className="absolute inset-0 w-full h-full" onClick={() => openItem(i)} aria-label={`View ${item.name}`}>
                         <img src={images[0]} alt={item.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                         {images.length > 1 && (
                           <span className="absolute bottom-2 right-2 bg-ink/70 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">+{images.length} photos</span>

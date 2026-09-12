@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { FiArrowLeft, FiArrowUpRight, FiX, FiChevronLeft, FiChevronRight, FiShare2, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { categories, whatsappLink } from "../data/siteData";
@@ -221,8 +221,30 @@ function ImageViewer({ tile, onClose, categoryName }) {
 /* ─── Category Page ─── */
 export default function CategoryPage() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [activeTile, setActiveTile] = useState(null);
   const category = categories.find((c) => c.slug === slug);
+
+  // Push #tile into history when viewer opens, pop it to close
+  const openTile = (i) => {
+    setActiveTile(i);
+    window.history.pushState({ tile: i }, "");
+  };
+
+  const closeTile = () => {
+    setActiveTile(null);
+  };
+
+  // Handle browser Back button while viewer is open
+  useEffect(() => {
+    const onPopState = () => {
+      if (activeTile !== null) {
+        setActiveTile(null);
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [activeTile]);
 
   if (!category) {
     return (
@@ -246,7 +268,7 @@ export default function CategoryPage() {
       {activeTile !== null && (
         <ImageViewer
           tile={category.tiles[activeTile]}
-          onClose={() => setActiveTile(null)}
+          onClose={closeTile}
           categoryName={category.name}
         />
       )}
@@ -290,7 +312,7 @@ export default function CategoryPage() {
                       <button
                         type="button"
                         className="absolute inset-0 w-full h-full"
-                        onClick={() => setActiveTile(i)}
+                        onClick={() => openTile(i)}
                         aria-label={`View ${tile.name}`}
                       >
                         <img
