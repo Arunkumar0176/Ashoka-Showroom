@@ -160,6 +160,7 @@ export const categories = [
         images: [
           "/images/tiles/Bathroom/BT1/PF.png",
           "/images/tiles/Bathroom/BT1/view1.png",
+          "/images/tiles/Bathroom/BT1/view2.png",
         ]
       },
       { 
