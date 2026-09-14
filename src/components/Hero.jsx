@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/20" />
 
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-end pb-10 sm:pb-16 lg:pb-20">
-          <p className="animate-fade-up text-[#f0bd83] text-sm sm:text-lg tracking-[0.2em] uppercase font-medium mb-2 font-black — 900 font-semibold">
+          <p className="animate-fade-up text-[#f2f2f0] text-sm sm:text-lg tracking-[0.2em] uppercase font-medium mb-2 font-black — 900 font-semibold">
             Premium Tiles &middot; Quality SanitaryWare &middot; Hardware &middot; Trusted Service
           </p>
           <h1 className="animate-fade-up font-display text-4xl sm:text-6xl lg:text-8xl leading-[1.08] font-semibold text-[#f2f2f0] max-w-5xl ">
