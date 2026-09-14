@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { FiArrowLeft, FiArrowUpRight, FiX, FiChevronLeft, FiChevronRight, FiShare2, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { categories, whatsappLink } from "../data/siteData";
@@ -222,29 +222,31 @@ function ImageViewer({ tile, onClose, categoryName }) {
 export default function CategoryPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeTile, setActiveTile] = useState(null);
   const category = categories.find((c) => c.slug === slug);
 
-  // Push #tile into history when viewer opens, pop it to close
+  // Open viewer: push a history entry so system Back closes the viewer
   const openTile = (i) => {
+    navigate(location.pathname + location.search, { state: { viewerOpen: true, tileIndex: i }, replace: false });
     setActiveTile(i);
-    window.history.pushState({ tile: i }, "");
   };
+  const closeTile = () => setActiveTile(null);
 
-  const closeTile = () => {
-    setActiveTile(null);
-  };
-
-  // Handle browser Back button while viewer is open
+  // When system Back is pressed while viewer is open, location.state loses
+  // viewerOpen — detect that and close the viewer instead of navigating away
   useEffect(() => {
-    const onPopState = () => {
-      if (activeTile !== null) {
-        setActiveTile(null);
-      }
-    };
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, [activeTile]);
+    if (activeTile !== null && !location.state?.viewerOpen) {
+      setActiveTile(null);
+    }
+  }, [location.state]);
+
+  // Re-open viewer if user presses Forward after closing with Back
+  useEffect(() => {
+    if (location.state?.viewerOpen && activeTile === null) {
+      setActiveTile(location.state.tileIndex);
+    }
+  }, [location.state]);
 
   if (!category) {
     return (
@@ -279,9 +281,12 @@ export default function CategoryPage() {
           <img src={category.image} alt={category.name} className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-ink/60" />
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-end pb-8 sm:pb-10">
-            <Link to="/#collection" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4 transition-colors w-fit">
+            <button
+              onClick={() => location.key !== "default" ? navigate(-1) : navigate("/#collection")}
+              className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4 transition-colors w-fit"
+            >
               <FiArrowLeft /> Back to Collection
-            </Link>
+            </button>
             <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">Our Collection</span>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mt-2">{category.name}</h1>
             <p className="text-white/75 mt-2 text-sm sm:text-base max-w-xl">{category.description}</p>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { FiArrowLeft, FiArrowUpRight, FiX, FiChevronLeft, FiChevronRight, FiShare2, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { sanitarywareItems, whatsappLink } from "../data/siteData";
@@ -158,25 +158,27 @@ function ImageViewer({ item, onClose, categoryName }) {
 export default function SanitarywarePage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeItem, setActiveItem] = useState(null);
   const category = sanitarywareItems.find((c) => c.slug === slug);
 
   const openItem = (i) => {
+    navigate(location.pathname + location.search, { state: { viewerOpen: true, itemIndex: i }, replace: false });
     setActiveItem(i);
-    window.history.pushState({ item: i }, "");
   };
-
-  const closeItem = () => {
-    setActiveItem(null);
-  };
+  const closeItem = () => setActiveItem(null);
 
   useEffect(() => {
-    const onPopState = () => {
-      if (activeItem !== null) setActiveItem(null);
-    };
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, [activeItem]);
+    if (activeItem !== null && !location.state?.viewerOpen) {
+      setActiveItem(null);
+    }
+  }, [location.state]);
+
+  useEffect(() => {
+    if (location.state?.viewerOpen && activeItem === null) {
+      setActiveItem(location.state.itemIndex);
+    }
+  }, [location.state]);
 
   if (!category) {
     return (
@@ -211,9 +213,12 @@ export default function SanitarywarePage() {
           <img src={category.image} alt={category.name} className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-ink/60" />
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-end pb-8 sm:pb-10">
-            <Link to="/#products" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4 transition-colors w-fit">
+            <button
+              onClick={() => location.key !== "default" ? navigate(-1) : navigate("/#products")}
+              className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4 transition-colors w-fit"
+            >
               <FiArrowLeft /> Back to Sanitaryware
-            </Link>
+            </button>
             <span className="text-xs tracking-[0.25em] uppercase text-accent font-semibold">Sanitaryware</span>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mt-2">{category.name}</h1>
             <p className="text-white/75 mt-2 text-sm sm:text-base max-w-xl">{category.description}</p>

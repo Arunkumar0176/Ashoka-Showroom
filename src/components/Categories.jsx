@@ -19,14 +19,14 @@ export default function Categories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {categories.map((category) => (
             <Link
               key={category.name}
               to={`/collections/${category.slug}`}
               className="group rounded-card overflow-hidden bg-surface border border-line shadow-card hover:shadow-lift transition-shadow block"
             >
-              <div className="relative h-44 sm:h-48 overflow-hidden">
+              <div className="relative h-28 sm:h-48 overflow-hidden">
                 <img
                   src={category.image}
                   alt={`${category.name} at Ashoka Tiles`}
@@ -34,14 +34,14 @@ export default function Categories() {
                   loading="lazy"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-lg font-semibold text-ink">
+              <div className="p-3 sm:p-5">
+                <h3 className="font-display text-base font-semibold text-ink">
                   {category.name}
                 </h3>
-                <p className="text-sm text-stone mt-2 leading-relaxed">
+                <p className="text-xs text-stone mt-1.5 leading-relaxed">
                   {category.description}
                 </p>
-                <span className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-accent group-hover:text-accent-dark transition-colors">
+                <span className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-accent group-hover:text-accent-dark transition-colors">
                   View Collection
                   <FiArrowUpRight />
                 </span>
