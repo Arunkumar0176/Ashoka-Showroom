@@ -58,7 +58,7 @@ export default function Contact() {
         </div>
 
         {/* Embedded map preview — links out to the full Google Maps location */}
-        <a
+        {/* <a
           href={SHOP_INFO.mapsLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -74,7 +74,36 @@ export default function Contact() {
             </p>
           </div>
           <span className="absolute inset-0 bg-ink/0 group-hover:bg-ink/5 transition-colors" />
-        </a>
+        </a> */}
+        <a
+  href={SHOP_INFO.mapsLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative rounded-card overflow-hidden border border-line shadow-card min-h-[260px] sm:min-h-[340px] flex items-center justify-center bg-surface"
+>
+  {/* Map Background */}
+  <img
+    src="images/map.png"
+    alt="Ashoka Tiles location map"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Soft overlay for readability */}
+  <div className="absolute inset-0 bg-white/60 group-hover:bg-white/50 transition-colors" />
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-8">
+    <FiMapPin className="mx-auto text-4xl text-[#07c63a]" />
+
+    <p className="mt-4 font-display text-lg text-ink font-semibold">
+      {SHOP_INFO.name}
+    </p>
+
+    <p className="text-sm text-black mt-3">
+      Tap to open our exact location in Google Maps
+    </p>
+  </div>
+</a>
       </div>
     </section>
   );
