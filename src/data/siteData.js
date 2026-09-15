@@ -171,6 +171,7 @@ export const categories = [
           "/images/tiles/Bathroom/BT2/PF.png",
           "/images/tiles/Bathroom/BT2/view1.png",
           "/images/tiles/Bathroom/BT2/view2.png",
+          "/images/tiles/Bathroom/BT2/view3.png",
         ]
       },
       { 
@@ -181,6 +182,7 @@ export const categories = [
           "/images/tiles/Bathroom/BT3/PF.png",
           "/images/tiles/Bathroom/BT3/view1.png",
           "/images/tiles/Bathroom/BT3/view2.png",
+          "/images/tiles/Bathroom/BT3/view3.png",
         ]
       },
       { 
@@ -191,6 +193,26 @@ export const categories = [
           "/images/tiles/Bathroom/BT4/PF.png",
           "/images/tiles/Bathroom/BT4/view1.png",
           "/images/tiles/Bathroom/BT4/view2.png",
+        ]
+      },
+      { 
+        name: "Bathroom Tile 5", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT5/PF.png",
+          "/images/tiles/Bathroom/BT5/view1.png",
+          "/images/tiles/Bathroom/BT5/view2.png",
+        ]
+      },
+      { 
+        name: "Bathroom Tile 6", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT6/PF.png",
+          "/images/tiles/Bathroom/BT6/view1.png",
+          "/images/tiles/Bathroom/BT6/view2.png",
         ]
       },
     ],
