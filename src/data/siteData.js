@@ -183,6 +183,16 @@ export const categories = [
           "/images/tiles/Bathroom/BT3/view2.png",
         ]
       },
+      { 
+        name: "Bathroom Tile 4", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT4/PF.png",
+          "/images/tiles/Bathroom/BT4/view1.png",
+          "/images/tiles/Bathroom/BT4/view2.png",
+        ]
+      },
     ],
   },
   {
@@ -257,7 +267,6 @@ export const categories = [
         images: [
           "/images/tiles/Kitchen/KC7/PF.png",
           "/images/tiles/Kitchen/KC7/view1.png",
-          "/images/tiles/Kitchen/KC7/view2.png",
         ]
       },
     ],
@@ -478,7 +487,7 @@ export const hardwareItems = [
   {
     name: "Hot & Cold Mixer",
     description: "Smooth-control mixers for consistent water temperature.",
-    image: "/images/hardware/PF4.png",
+    image: "/images/hardware/PF5.png",
   },
   {
     name: "Kitchen Fittings",
