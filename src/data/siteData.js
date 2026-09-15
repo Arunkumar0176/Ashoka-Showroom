@@ -390,8 +390,37 @@ export const sanitarywareItems = [
     name: "Vanity Box",
     slug: "vanity-box",
     description: "Stylish vanity units combining storage and elegance for modern bathrooms.",
-    image: "/images/Sanitaryware_cat/vanityPF.png",
-    items: [],
+    image: "/images/Sanitaryware_cat/vanity/vanityPF.png",
+    items: [
+      { name: "Vanity Box 1",
+        // size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/Sanitaryware_cat/vanity/V1.png",
+        ]
+       },
+       { name: "Vanity Box 2",
+        // size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/Sanitaryware_cat/vanity/V2.png",
+        ]
+       },
+       { name: "Vanity Box 3",
+        // size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/Sanitaryware_cat/vanity/V3.png",
+        ]
+       },
+       { name: "Vanity Box 4",
+        // size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/Sanitaryware_cat/vanity/V4.png",
+        ]
+       },
+    ],
   },
   {
     name: "English Seat",

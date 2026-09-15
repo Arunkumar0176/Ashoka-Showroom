@@ -33,8 +33,7 @@ export default function WhyChooseUs() {
             Our Promise
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink mt-3">
-            Why Choose Ashoka 
-            Tiles?
+            Why Choose Ashoka ?
           </h2>
         </div>
 
