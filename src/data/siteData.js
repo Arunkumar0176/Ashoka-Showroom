@@ -21,7 +21,7 @@ export const SHOP_INFO = {
   whatsappMessage:
     "Hi, I'd like to enquire about tiles and SanitaryWare products.",
 
-  address: "Lakri Bazar, Mirganj Road, Siwan, Bihar",
+  address: "Siwan, Bihar",
   hours: " Monday-Sunday, (7:00 AM – 8:00 PM)",
 
   // Your Google Maps share link — used by every "Get Directions" button.

@@ -10,8 +10,7 @@ export default function CTA() {
           Give Your Home a Premium Look
         </h2>
         <p className="text-white/70 mt-4 text-base sm:text-lg">
-          Discover beautiful tiles and quality SanitaryWare products at Ashoka
-          Tiles &amp; SanitaryWare.
+          Discover beautiful tiles and quality SanitaryWare &amp; Hardware products at Ashoka.
         </p>
 
         <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
