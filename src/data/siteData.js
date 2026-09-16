@@ -215,6 +215,16 @@ export const categories = [
           "/images/tiles/Bathroom/BT6/view2.png",
         ]
       },
+      { 
+        name: "Bathroom Tile 7", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT7/PF.png",
+          "/images/tiles/Bathroom/BT7/view1.png",
+          "/images/tiles/Bathroom/BT7/view2.png",
+        ]
+      },
     ],
   },
   {
