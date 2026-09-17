@@ -235,6 +235,36 @@ export const categories = [
           "/images/tiles/Bathroom/BT8/view2.png",
         ]
       },
+      { 
+        name: "Bathroom Tile 9", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT9/PF.png",
+          "/images/tiles/Bathroom/BT9/view1.png",
+          "/images/tiles/Bathroom/BT9/view2.png",
+        ]
+      },
+      { 
+        name: "Bathroom Tile 10", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT10/PF.png",
+          "/images/tiles/Bathroom/BT10/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 11", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT11/PF.png",
+          "/images/tiles/Bathroom/BT11/view1.png",
+         
+        ]
+      },
     ],
   },
   {
