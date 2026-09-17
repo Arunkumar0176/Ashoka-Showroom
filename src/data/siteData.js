@@ -225,6 +225,16 @@ export const categories = [
           "/images/tiles/Bathroom/BT7/view2.png",
         ]
       },
+      { 
+        name: "Bathroom Tile 8", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT8/PF.png",
+          "/images/tiles/Bathroom/BT8/view1.png",
+          "/images/tiles/Bathroom/BT8/view2.png",
+        ]
+      },
     ],
   },
   {
@@ -472,8 +482,15 @@ export const sanitarywareItems = [
     name: "Basin",
     slug: "basin",
     description: "Wall-hung and counter-top basins crafted for style and functionality.",
-    image: "/images/Sanitaryware_cat/BasinPF.png",
-    items: [],
+    image: "/images/Sanitaryware_cat/Basin/BasinPF.png",
+    items: [
+      { name: "Basin 1",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/Sanitaryware_cat/Basin/BS1.png",
+        ]
+      }
+    ],
   },
   {
     name: "Tank",
