@@ -144,6 +144,16 @@ export const categories = [
           "/images/tiles/Floor/Fl10/view1.png",
         ]
       },
+      { 
+        name: "Floor Tile 11", 
+        size: "2 × 2 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/FL11/PF.png",
+          "/images/tiles/Floor/FL11/view2.png",
+          "/images/tiles/Floor/FL11/view1.png",
+        ]
+      },
     ],
   },
   
@@ -262,6 +272,46 @@ export const categories = [
         images: [
           "/images/tiles/Bathroom/BT11/PF.png",
           "/images/tiles/Bathroom/BT11/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 12", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT12/PF.png",
+          "/images/tiles/Bathroom/BT12/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 13", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT13/PF.png",
+          "/images/tiles/Bathroom/BT13/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 14", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT14/PF.png",
+          "/images/tiles/Bathroom/BT14/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 15", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT15/PF.png",
+          "/images/tiles/Bathroom/BT15/view1.png",
          
         ]
       },
@@ -416,6 +466,22 @@ export const categories = [
     ],
   },
   {
+    name: "Outdoor Tiles",
+    slug: "outdoor-tiles",
+    description: "Weatherproof tiles for patios, balconies and courtyards.",
+    image: "/images/category/outdoorPF.png",
+    tiles: [
+      { name: "Outdoor Tile 1",
+        size: "12 × 18 inc",
+        description: "Made with high-quality raw materials for long-lasting performance.",
+        images: [
+          "/images/tiles/outdoor/OUT1/PF.png",
+          "/images/tiles/outdoor/OUT1/view1.png",
+        ]
+       },
+    ],
+  },
+  {
     name: "Living Room Tiles",
     slug: "living-room-tiles",
     description: "Statement tiles that anchor your living space.",
@@ -424,15 +490,7 @@ export const categories = [
       { name: "Living Room Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles1PF.png" },
     ],
   },
-  {
-    name: "Outdoor Tiles",
-    slug: "outdoor-tiles",
-    description: "Weatherproof tiles for patios, balconies and courtyards.",
-    image: "/images/category/outdoorPF.png",
-    tiles: [
-      { name: "Outdoor Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles2PF.png" },
-    ],
-  },
+  
   {
     name: "Marble Finish Tiles",
     slug: "marble-finish-tiles",
