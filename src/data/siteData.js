@@ -154,6 +154,16 @@ export const categories = [
           "/images/tiles/Floor/FL11/view1.png",
         ]
       },
+      { 
+        name: "Floor Tile 12", 
+        size: "2 × 2 ft", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Floor/FL12/PF.jpeg",
+          "/images/tiles/Floor/FL12/view1.jpeg",
+          "/images/tiles/Floor/FL12/view2.jpeg",
+        ]
+      },
     ],
   },
   
@@ -312,6 +322,16 @@ export const categories = [
         images: [
           "/images/tiles/Bathroom/BT15/PF.png",
           "/images/tiles/Bathroom/BT15/view1.png",
+         
+        ]
+      },
+      { 
+        name: "Bathroom Tile 16", 
+        size: "12 × 18 inc", 
+        description: "Made with high-quality raw materials for long-lasting performance.", 
+        images: [
+          "/images/tiles/Bathroom/BT16/PF.jpeg",
+          "/images/tiles/Bathroom/BT16/view1.jpeg",
          
         ]
       },
