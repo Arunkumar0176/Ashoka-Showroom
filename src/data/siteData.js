@@ -48,292 +48,399 @@ export function whatsappLink(customMessage) {
 // ---------------------------------------------------------------------
 export const categories = [
   {
-    name: "Floor Tiles",
+    name: "Floor Tiles - 2x4",
     slug: "floor-tiles",
     description: "Durable, elegant tiles built for everyday living spaces.",
     image: "/images/category/floorPF.png",
     tiles: [
-      { 
-        name: "Floor Tile 1", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 1",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl1/tilesPF.png",
           "/images/tiles/Floor/Fl1/view1.jpg",
           "/images/tiles/Floor/Fl1/view1.jpg",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 2", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 2",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl2/tiles1PF.png",
           "/images/tiles/Floor/Fl2/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 3", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 3",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl3/tiles1PF.jpg",
           "/images/tiles/Floor/Fl3/view1.jpg",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 4", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 4",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl4/PF1.jpg",
           "/images/tiles/Floor/Fl4/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 5", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 5",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl5/PF1.png",
           "/images/tiles/Floor/Fl5/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 6", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 6",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl6/PF1.png",
           "/images/tiles/Floor/Fl6/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 7", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 7",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl7/PF1.png",
           "/images/tiles/Floor/Fl7/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 8", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
-        images: [
-          "/images/tiles/Floor/Fl8/PF1.png",
-          
-        ]
+      {
+        name: "Floor Tile 8",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: ["/images/tiles/Floor/Fl8/PF1.png"],
       },
-      { 
-        name: "Floor Tile 9", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 9",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl9/PF1.png",
           "/images/tiles/Floor/Fl9/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 10", 
-        size: "2 × 4 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 10",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
         images: [
           "/images/tiles/Floor/Fl10/PF1.png",
           "/images/tiles/Floor/Fl10/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 11", 
-        size: "2 × 2 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      
+      
+    ],
+  },
+// floor tiles 2 * 2
+{
+    name: "Floor Tiles - 2x2",
+    slug: "floor-tiles-2*2",
+    description: "Statement tiles that anchor your living space.",
+    image: "/images/category/LivingRoomPF.png",
+    tiles: [
+      {
+        name: "Floor Tile 1",
+        size: "2 × 2 ft",
+        description:
+          "A premium matte finish that adds understated luxury and modern elegance to your interiors.",
         images: [
           "/images/tiles/Floor/FL11/PF.png",
           "/images/tiles/Floor/FL11/view2.png",
           "/images/tiles/Floor/FL11/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Floor Tile 12", 
-        size: "2 × 2 ft", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Floor Tile 2",
+        size: "2 × 2 ft",
+        description:
+          "A premium matte finish that adds understated luxury and modern elegance to your interiors.",
         images: [
           "/images/tiles/Floor/FL12/PF.jpeg",
           "/images/tiles/Floor/FL12/view1.jpeg",
           "/images/tiles/Floor/FL12/view2.jpeg",
-        ]
+        ],
+      },
+      {
+        name: "Floor Tile 3",
+        size: "2 × 2 ft",
+        description:
+          "A premium matte finish that adds understated luxury and modern elegance to your interiors.",
+        images: [
+          "/images/tiles/Floor/FL13/PF.jpeg",
+          "/images/tiles/Floor/FL13/view1.jpeg",
+          "/images/tiles/Floor/FL13/view2.jpeg",
+        ],
+      },
+      {
+        name: "Floor Tile 4",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "/images/tiles/Floor/FL14/PF.jpeg",
+          "/images/tiles/Floor/FL14/view1.jpeg",
+          "/images/tiles/Floor/FL14/view2.jpeg",
+        ],
+      },
+      {
+        name: "Floor Tile 5",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "/images/tiles/Floor/FL15/PF.jpeg",
+          "/images/tiles/Floor/FL15/view1.jpeg",
+          "/images/tiles/Floor/FL15/view2.jpeg",
+        ],
+      },
+      {
+        name: "Floor Tile 6",
+        size: "2 × 2 ft",
+        description:
+          "A premium matte finish that adds understated luxury and modern elegance to your interiors.",
+        images: [
+          "/images/tiles/Floor/FL16/PF.jpeg",
+          "/images/tiles/Floor/FL16/view1.jpeg",
+          "/images/tiles/Floor/FL16/view2.jpeg",
+        ],
+      },
+      {
+        name: "Floor Tile 7",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "/images/tiles/Floor/FL17/PF.jpeg",
+          // "/images/tiles/Floor/FL17/view1.jpeg",
+          // "/images/tiles/Floor/FL17/view2.jpeg",
+        ],
+      },
+       {
+        name: "Floor Tile 8",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348499/18.1.jpg",
+           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.3.jpg",
+           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.2.jpg",
+        ],
+      },
+      {
+        name: "Floor Tile 9",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/PF.jpg",
+           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/view1.jpg",
+           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347955/view2.jpg",
+        ],
       },
     ],
   },
-  
+
+
   {
     name: "Bathroom Tiles",
     slug: "bathroom-tiles",
     description: "Water-resistant tiles designed for lasting shine.",
     image: "/images/category/BathroomPF.png",
     tiles: [
-      { 
-        name: "Bathroom Tile 1", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 1",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT1/PF.png",
           "/images/tiles/Bathroom/BT1/view1.png",
           "/images/tiles/Bathroom/BT1/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 2", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 2",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT2/PF.png",
           "/images/tiles/Bathroom/BT2/view1.png",
           "/images/tiles/Bathroom/BT2/view2.png",
           "/images/tiles/Bathroom/BT2/view3.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 3", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 3",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT3/PF.png",
           "/images/tiles/Bathroom/BT3/view1.png",
           "/images/tiles/Bathroom/BT3/view2.png",
           "/images/tiles/Bathroom/BT3/view3.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 4", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 4",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT4/PF.png",
           "/images/tiles/Bathroom/BT4/view1.png",
           "/images/tiles/Bathroom/BT4/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 5", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 5",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT5/PF.png",
           "/images/tiles/Bathroom/BT5/view1.png",
           "/images/tiles/Bathroom/BT5/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 6", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 6",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT6/PF.png",
           "/images/tiles/Bathroom/BT6/view1.png",
           "/images/tiles/Bathroom/BT6/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 7", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 7",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT7/PF.png",
           "/images/tiles/Bathroom/BT7/view1.png",
           "/images/tiles/Bathroom/BT7/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 8", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 8",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT8/PF.png",
           "/images/tiles/Bathroom/BT8/view1.png",
           "/images/tiles/Bathroom/BT8/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 9", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 9",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT9/PF.png",
           "/images/tiles/Bathroom/BT9/view1.png",
           "/images/tiles/Bathroom/BT9/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 10", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 10",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT10/PF.png",
           "/images/tiles/Bathroom/BT10/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 11", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 11",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT11/PF.png",
           "/images/tiles/Bathroom/BT11/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 12", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 12",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT12/PF.png",
           "/images/tiles/Bathroom/BT12/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 13", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 13",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT13/PF.png",
           "/images/tiles/Bathroom/BT13/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 14", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 14",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT14/PF.png",
           "/images/tiles/Bathroom/BT14/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 15", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 15",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT15/PF.png",
           "/images/tiles/Bathroom/BT15/view1.png",
-         
-        ]
+        ],
       },
-      { 
-        name: "Bathroom Tile 16", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Bathroom Tile 16",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Bathroom/BT16/PF.jpeg",
           "/images/tiles/Bathroom/BT16/view1.jpeg",
-         
-        ]
+        ],
       },
     ],
   },
@@ -343,73 +450,80 @@ export const categories = [
     description: "Stain-resistant tiles for hardworking kitchens.",
     image: "/images/category/KitchenPF.png",
     tiles: [
-      { 
-        name: "Kitchen Tile 1", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 1",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC1/KC1.png",
           "/images/tiles/Kitchen/KC1/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Kitchen Tile 2", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 2",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC2/PF1.png",
           "/images/tiles/Kitchen/KC2/view1.png",
-        ]
+        ],
       },
-      { 
-        name: "Kitchen Tile 3", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 3",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC3/PF.png",
           "/images/tiles/Kitchen/KC3/view1.png",
-          "/images/tiles/Kitchen/KC3/view2.png"
-        ]
+          "/images/tiles/Kitchen/KC3/view2.png",
+        ],
       },
-      { 
-        name: "Kitchen Tile 4", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 4",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC4/PF.png",
           "/images/tiles/Kitchen/KC4/view1.png",
-          "/images/tiles/Kitchen/KC4/view2.png"
-        ]
+          "/images/tiles/Kitchen/KC4/view2.png",
+        ],
       },
-      { 
-        name: "Kitchen Tile 5", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 5",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC5/PF.png",
           "/images/tiles/Kitchen/KC5/view1.png",
           "/images/tiles/Kitchen/KC5/view2.png",
-          "/images/tiles/Kitchen/KC5/view3.png"
-        ]
+          "/images/tiles/Kitchen/KC5/view3.png",
+        ],
       },
-      { 
-        name: "Kitchen Tile 6", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 6",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC6/PF.png",
           "/images/tiles/Kitchen/KC6/view1.png",
           "/images/tiles/Kitchen/KC6/view2.png",
-        ]
+        ],
       },
-      { 
-        name: "Kitchen Tile 7", 
-        size: "12 × 18 inc", 
-        description: "Made with high-quality raw materials for long-lasting performance.", 
+      {
+        name: "Kitchen Tile 7",
+        size: "12 × 18 inc",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Kitchen/KC7/PF.png",
           "/images/tiles/Kitchen/KC7/view1.png",
-        ]
+        ],
       },
     ],
   },
@@ -419,70 +533,86 @@ export const categories = [
     description: "Glossy and matte finishes to elevate any wall.",
     image: "/images/category/wallPF.png",
     tiles: [
-      { name: "Elevation Tile 1",
+      {
+        name: "Elevation Tile 1",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev1/PF.png",
           "/images/tiles/Elevation/Ev1/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 2",
+        ],
+      },
+      {
+        name: "Elevation Tile 2",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev2/PF.png",
           "/images/tiles/Elevation/Ev2/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 3",
+        ],
+      },
+      {
+        name: "Elevation Tile 3",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev3/PF.png",
           "/images/tiles/Elevation/Ev3/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 4",
+        ],
+      },
+      {
+        name: "Elevation Tile 4",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev4/PF.png",
           "/images/tiles/Elevation/Ev4/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 5",
+        ],
+      },
+      {
+        name: "Elevation Tile 5",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev5/PF.png",
           "/images/tiles/Elevation/Ev5/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 6",
+        ],
+      },
+      {
+        name: "Elevation Tile 6",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev6/PF.png",
           "/images/tiles/Elevation/Ev6/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 7",
+        ],
+      },
+      {
+        name: "Elevation Tile 7",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev7/PF.png",
           "/images/tiles/Elevation/Ev7/view1.png",
-        ]
-       },
-       { name: "Elevation Tile 8",
+        ],
+      },
+      {
+        name: "Elevation Tile 8",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/Elevation/Ev8/PF.png",
           "/images/tiles/Elevation/Ev8/view1.png",
-        ]
-       },
+        ],
+      },
     ],
   },
   {
@@ -491,33 +621,32 @@ export const categories = [
     description: "Weatherproof tiles for patios, balconies and courtyards.",
     image: "/images/category/outdoorPF.png",
     tiles: [
-      { name: "Outdoor Tile 1",
+      {
+        name: "Outdoor Tile 1",
         size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
         images: [
           "/images/tiles/outdoor/OUT1/PF.png",
           "/images/tiles/outdoor/OUT1/view1.png",
-        ]
-       },
-    ],
-  },
-  {
-    name: "Living Room Tiles",
-    slug: "living-room-tiles",
-    description: "Statement tiles that anchor your living space.",
-    image: "/images/category/LivingRoomPF.png",
-    tiles: [
-      { name: "Living Room Tile 1", size: "2 × 4 ft", price: "₹270 / Box", image: "/images/tiles/tiles1PF.png" },
+        ],
+      },
     ],
   },
   
+
   {
     name: "Marble Finish Tiles",
     slug: "marble-finish-tiles",
     description: "The look of natural marble, made for daily use.",
     image: "/images/category/marbelPF.png",
     tiles: [
-      { name: "Marble Tile 1", size: "2 × 4 ft", price: "₹600 / Box", image: "/images/tiles/tiles3PF.png" },
+      {
+        name: "Marble Tile 1",
+        size: "2 × 4 ft",
+        price: "₹600 / Box",
+        image: "/images/tiles/tiles3PF.png",
+      },
     ],
   },
   {
@@ -526,7 +655,12 @@ export const categories = [
     description: "Our finest imported and designer tile collections.",
     image: "/images/category/PremiumPF.png",
     tiles: [
-      { name: "Premium Tile 1", size: "2 × 4 ft", price: "₹600 / Box", image: "/images/tiles/tiles4PF.png" },
+      {
+        name: "Premium Tile 1",
+        size: "2 × 4 ft",
+        price: "₹600 / Box",
+        image: "/images/tiles/tiles4PF.png",
+      },
     ],
   },
 ];
@@ -539,78 +673,84 @@ export const sanitarywareItems = [
   {
     name: "Vanity Box",
     slug: "vanity-box",
-    description: "Stylish vanity units combining storage and elegance for modern bathrooms.",
+    description:
+      "Stylish vanity units combining storage and elegance for modern bathrooms.",
     image: "/images/Sanitaryware_cat/vanity/vanityPF.png",
     items: [
-      { name: "Vanity Box 1",
+      {
+        name: "Vanity Box 1",
         // size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
-        images: [
-          "/images/Sanitaryware_cat/vanity/V1.png",
-        ]
-       },
-       { name: "Vanity Box 2",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["/images/Sanitaryware_cat/vanity/V1.png"],
+      },
+      {
+        name: "Vanity Box 2",
         // size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
-        images: [
-          "/images/Sanitaryware_cat/vanity/V2.png",
-        ]
-       },
-       { name: "Vanity Box 3",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["/images/Sanitaryware_cat/vanity/V2.png"],
+      },
+      {
+        name: "Vanity Box 3",
         // size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
-        images: [
-          "/images/Sanitaryware_cat/vanity/V3.png",
-        ]
-       },
-       { name: "Vanity Box 4",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["/images/Sanitaryware_cat/vanity/V3.png"],
+      },
+      {
+        name: "Vanity Box 4",
         // size: "12 × 18 inc",
-        description: "Made with high-quality raw materials for long-lasting performance.",
-        images: [
-          "/images/Sanitaryware_cat/vanity/V4.png",
-        ]
-       },
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["/images/Sanitaryware_cat/vanity/V4.png"],
+      },
     ],
   },
   {
     name: "English Seat",
     slug: "english-seat",
-    description: "Comfortable, hygienic English-style toilet seats built for daily use.",
+    description:
+      "Comfortable, hygienic English-style toilet seats built for daily use.",
     image: "/images/Sanitaryware_cat/SeatPF.png",
     items: [],
   },
   {
     name: "Sink",
     slug: "sink",
-    description: "Durable kitchen and utility sinks in multiple sizes and finishes.",
+    description:
+      "Durable kitchen and utility sinks in multiple sizes and finishes.",
     image: "/images/Sanitaryware_cat/SinkPF.png",
     items: [],
   },
   {
     name: "Basin",
     slug: "basin",
-    description: "Wall-hung and counter-top basins crafted for style and functionality.",
+    description:
+      "Wall-hung and counter-top basins crafted for style and functionality.",
     image: "/images/Sanitaryware_cat/Basin/BasinPF.png",
     items: [
-      { name: "Basin 1",
-        description: "Made with high-quality raw materials for long-lasting performance.",
-        images: [
-          "/images/Sanitaryware_cat/Basin/BS1.png",
-        ]
-      }
+      {
+        name: "Basin 1",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["/images/Sanitaryware_cat/Basin/BS1.png"],
+      },
     ],
   },
   {
     name: "Tank",
     slug: "tank",
-    description: "Reliable flush tanks with smooth operation and water-saving design.",
+    description:
+      "Reliable flush tanks with smooth operation and water-saving design.",
     image: "/images/Sanitaryware_cat/TankPF.png",
     items: [],
   },
   {
     name: "Other",
     slug: "other",
-    description: "Explore more sanitaryware essentials — ask us in-store for the full range.",
+    description:
+      "Explore more sanitaryware essentials — ask us in-store for the full range.",
     image: "/images/Sanitaryware_cat/other.png",
     items: [],
   },
