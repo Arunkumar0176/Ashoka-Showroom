@@ -151,12 +151,10 @@ export const categories = [
           "/images/tiles/Floor/Fl10/view1.png",
         ],
       },
-      
-      
     ],
   },
-// floor tiles 2 * 2
-{
+  // floor tiles 2 * 2
+  {
     name: "Floor Tiles - 2x2",
     slug: "floor-tiles-2*2",
     description: "Statement tiles that anchor your living space.",
@@ -192,7 +190,7 @@ export const categories = [
         images: [
           "/images/tiles/Floor/FL13/PF.jpeg",
           "/images/tiles/Floor/FL13/view1.jpeg",
-          "/images/tiles/Floor/FL13/view2.jpeg",
+          //"/images/tiles/Floor/FL13/view2.jpeg",
         ],
       },
       {
@@ -203,7 +201,7 @@ export const categories = [
         images: [
           "/images/tiles/Floor/FL14/PF.jpeg",
           "/images/tiles/Floor/FL14/view1.jpeg",
-          "/images/tiles/Floor/FL14/view2.jpeg",
+          //"/images/tiles/Floor/FL14/view2.jpeg",
         ],
       },
       {
@@ -214,7 +212,7 @@ export const categories = [
         images: [
           "/images/tiles/Floor/FL15/PF.jpeg",
           "/images/tiles/Floor/FL15/view1.jpeg",
-          "/images/tiles/Floor/FL15/view2.jpeg",
+          // "/images/tiles/Floor/FL15/view2.jpeg",
         ],
       },
       {
@@ -225,7 +223,7 @@ export const categories = [
         images: [
           "/images/tiles/Floor/FL16/PF.jpeg",
           "/images/tiles/Floor/FL16/view1.jpeg",
-          "/images/tiles/Floor/FL16/view2.jpeg",
+          //"/images/tiles/Floor/FL16/view2.jpeg",
         ],
       },
       {
@@ -239,15 +237,15 @@ export const categories = [
           // "/images/tiles/Floor/FL17/view2.jpeg",
         ],
       },
-       {
+      {
         name: "Floor Tile 8",
         size: "2 × 2 ft",
         description:
           "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
         images: [
-          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348499/18.1.jpg",
-           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.3.jpg",
-           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348499/18.1.jpg", //18
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.3.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790348500/18.2.jpg",
         ],
       },
       {
@@ -256,14 +254,76 @@ export const categories = [
         description:
           "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
         images: [
-          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/PF.jpg",
-           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/view1.jpg",
-           "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347955/view2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/PF.jpg",// 19
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347954/view1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790347955/view2.jpg",
+        ],
+      },
+      {
+        name: "Floor Tile 10",
+        size: "2 × 2 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790422329/20.1.jpg", // 20
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790422329/20.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790422329/20.3.jpg",
+        ],
+      },
+      {
+        name: "Floor Tile 11",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487141/21.jpg", // 21
+         
+        ],
+      },
+      {
+        name: "Floor Tile 12",
+        size: "2 × 2 ft",
+        description:
+          "Premium sugar-textured finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487230/22.jpg", // 22
+         
+        ],
+      },
+      {
+        name: "Floor Tile 13",
+        size: "2 × 2 ft",
+        description:
+          "Premium mate finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487288/23.1.jpg",//23
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487289/23.3.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487289/23.2.jpg",
+        ],
+      },
+      {
+        name: "Floor Tile 14",
+        size: "2 × 2 ft",
+        description:
+          "Premium mate finish crafted to bring distinctive character, refined elegance, and lasting beauty to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487465/24.1.jpg",//24
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790487466/24.2.jpg"
+        ],
+      },
+      {
+        name: "Floor Tile 15",
+        size: "2 × 2 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790488646/25.1.jpg",//24
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790488647/25.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1790488647/25.3.jpg"
         ],
       },
     ],
   },
-
 
   {
     name: "Bathroom Tiles",
@@ -633,7 +693,6 @@ export const categories = [
       },
     ],
   },
-  
 
   {
     name: "Marble Finish Tiles",
@@ -713,7 +772,28 @@ export const sanitarywareItems = [
     description:
       "Comfortable, hygienic English-style toilet seats built for daily use.",
     image: "/images/Sanitaryware_cat/SeatPF.png",
-    items: [],
+    items: [
+      {
+        name: "Seat 1",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790490493/Eng1.png"],
+      },
+      {
+        name: "Seat 2",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790490494/Eng2.png"],
+      },
+      {
+        name: "Seat 3",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790490495/Eng3.png"],
+      },
+
+
+    ],
   },
   {
     name: "Sink",
@@ -721,7 +801,14 @@ export const sanitarywareItems = [
     description:
       "Durable kitchen and utility sinks in multiple sizes and finishes.",
     image: "/images/Sanitaryware_cat/SinkPF.png",
-    items: [],
+    items: [
+      {
+        name: "Sink 1",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790491261/sink1.png"],
+      },
+    ],
   },
   {
     name: "Basin",
@@ -735,6 +822,24 @@ export const sanitarywareItems = [
         description:
           "Made with high-quality raw materials for long-lasting performance.",
         images: ["/images/Sanitaryware_cat/Basin/BS1.png"],
+      },
+      {
+        name: "Basin 2",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790489867/Basin1.png"],
+      },
+      {
+        name: "Basin 3",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790489883/Basin2.png"],
+      },
+      {
+        name: "Basin 4",
+        description:
+          "Made with high-quality raw materials for long-lasting performance.",
+        images: ["https://res.cloudinary.com/vqgdx3lz/image/upload/v1790489899/Basin3.png"],
       },
     ],
   },
