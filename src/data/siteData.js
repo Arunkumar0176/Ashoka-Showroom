@@ -151,6 +151,38 @@ export const categories = [
           "/images/tiles/Floor/Fl10/view1.png",
         ],
       },
+      {
+        name: "Floor Tile 11",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791727828/26.1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791727828/26.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791813868/26.3.png"
+        ],
+      },
+      {
+        name: "Floor Tile 12",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728128/27.1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728129/27.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728130/27.3.jpg"
+        ],
+      },
+      {
+        name: "Floor Tile 13",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728360/28.1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791813917/28.2.png",
+        ],
+      },
     ],
   },
   // floor tiles 2 * 2
@@ -701,11 +733,28 @@ export const categories = [
     image: "/images/category/marbelPF.png",
     tiles: [
       {
-        name: "Marble Tile 1",
+        name: "Floor Tile 1",
         size: "2 × 4 ft",
-        price: "₹600 / Box",
-        image: "/images/tiles/tiles3PF.png",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728128/27.1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728129/27.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791728130/27.3.jpg"
+        ],
       },
+      {
+        name: "Floor Tile 2",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "/images/tiles/Floor/Fl1/tilesPF.png",
+          "/images/tiles/Floor/Fl1/view1.jpg",
+          "/images/tiles/Floor/Fl1/view1.jpg",
+        ],
+      },
+
     ],
   },
   {
@@ -715,10 +764,26 @@ export const categories = [
     image: "/images/category/PremiumPF.png",
     tiles: [
       {
-        name: "Premium Tile 1",
+        name: "Floor Tile 1",
         size: "2 × 4 ft",
-        price: "₹600 / Box",
-        image: "/images/tiles/tiles4PF.png",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791727828/26.1.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791727828/26.2.jpg",
+          "https://res.cloudinary.com/vqgdx3lz/image/upload/v1791813868/26.3.png"
+        ],
+      },
+      {
+        name: "Floor Tile 2",
+        size: "2 × 4 ft",
+        description:
+          "Premium glossy finish crafted to bring timeless elegance, luxury, and brilliance to every space.",
+        images: [
+          "/images/tiles/Floor/Fl1/tilesPF.png",
+          "/images/tiles/Floor/Fl1/view1.jpg",
+          "/images/tiles/Floor/Fl1/view1.jpg",
+        ],
       },
     ],
   },
