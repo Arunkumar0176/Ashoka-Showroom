@@ -16,7 +16,7 @@ function ShareOnCard({ item, categoryName }) {
   const [copied, setCopied] = useState(false);
   const handleShare = async (e) => {
     e.stopPropagation();
-    const text = `Check out "${item.name}" at Ashoka Tiles!\n${window.location.href}`;
+    const text = `Check out "${item.name}" at Ashoka Trading Company!\n${window.location.href}`;
     if (navigator.share) {
       try { await navigator.share({ title: item.name, text, url: window.location.href }); } catch (_) {}
     } else {
@@ -80,7 +80,7 @@ function ImageViewer({ item, onClose, categoryName }) {
   };
 
   const handleShare = async () => {
-    const text = `Check out "${item.name}" at Ashoka Tiles!\n${window.location.href}`;
+    const text = `Check out "${item.name}" at Ashoka Trading Company!\n${window.location.href}`;
     if (navigator.share) {
       try { await navigator.share({ title: item.name, text, url: window.location.href }); } catch (_) {}
     } else {

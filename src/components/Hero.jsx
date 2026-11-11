@@ -13,7 +13,7 @@ export default function Hero() {
         {/* Background image — change this file to update the hero photo */}
         <img
           src="/images/hero.png"
-          alt="Premium tile showroom display at Ashoka Tiles & Hardware"
+          alt="Premium tile showroom display at Ashoka Trading Company"
           className="absolute inset-0 h-full w-full object-cover object-top sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/20" />

@@ -11,7 +11,7 @@
 // button and the WhatsApp button, so you only need to change it once.
 // ---------------------------------------------------------------------
 export const SHOP_INFO = {
-  name: "Ashoka Tiles",
+  name: "Ashoka Trading Company",
   tagline: "Premium Tiles & SanitaryWare for Your Dream Home",
 
   // Replace with your real 10-digit number (no spaces, with country code for WhatsApp).

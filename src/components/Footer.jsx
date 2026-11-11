@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="bg-ink text-white/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
         <div>
-          <p className="font-display text-2xl font-semibold text-white">Ashoka Tiles</p>
+          <p className="font-display text-2xl font-semibold text-white">Ashoka Trading Company</p>
           <p className="text-sm text-white/60 mt-2">{SHOP_INFO.tagline}</p>
         </div>
 
@@ -70,7 +70,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10 py-6">
         <p className="text-center text-xs text-white/50">
-          © {year} Ashoka Tiles. All Rights Reserved.
+          © {year} Ashoka Trading Company. All Rights Reserved.
         </p>
       </div>
     </footer>

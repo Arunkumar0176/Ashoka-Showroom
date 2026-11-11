@@ -6,7 +6,7 @@ export default function About() {
         <div className="rounded-card overflow-hidden shadow-lift order-2 lg:order-1">
           <img
             src="/images/about.png"
-            alt="Inside the Ashoka Tiles & Hardware showroom"
+            alt="Inside the Ashoka Trading Company showroom"
             className="w-full h-[280px] sm:h-[420px] lg:h-[520px] object-cover"
             loading="lazy"
           />

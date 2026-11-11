@@ -36,7 +36,7 @@ export default function Header() {
           <a href="#home" onClick={(e) => handleNav(e, "#home")} className="flex items-center gap-3">
             <img
               src="/images/logo.png"
-              alt="Ashoka Tiles Logo"
+              alt="Ashoka Trading Company Logo"
               className="h-14 w-14 rounded-full object-cover border border-line shadow-sm"
             />
             <div className="flex flex-col leading-tight">

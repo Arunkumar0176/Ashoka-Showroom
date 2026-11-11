@@ -19,7 +19,7 @@ export default function Contact() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink mt-3">
             Visit Our Showroom
           </h2>
-          <p className="font-display text-xl text-ink mt-6">Ashoka Tiles</p>
+          <p className="font-display text-xl text-ink mt-6">Ashoka Trading Company</p>
 
           <dl className="mt-6 space-y-5">
             {infoRows.map(({ icon: Icon, label, value }) => (
@@ -84,7 +84,7 @@ export default function Contact() {
   {/* Map Background */}
   <img
     src="images/map.png"
-    alt="Ashoka Tiles location map"
+    alt="Ashoka Trading Company location map"
     className="absolute inset-0 w-full h-full object-cover"
   />
 

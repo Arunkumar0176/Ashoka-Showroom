@@ -29,7 +29,7 @@ export default function Categories() {
               <div className="relative h-28 sm:h-48 overflow-hidden">
                 <img
                   src={category.image}
-                  alt={`${category.name} at Ashoka Tiles`}
+                  alt={`${category.name} at Ashoka Trading Company`}
                   className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
